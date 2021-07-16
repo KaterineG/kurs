@@ -44,15 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
             selectBtn.addEventListener('click', function(event) {
                 const path = event.currentTarget.dataset.item;
                 const currOption = document.querySelector(`[data-dropdown="${path}"]`); //текущий выбор
+				const mark = document.querySelector(`[data-mark="${path}"]`); //текущий выбор нижнего меню
                 if (currOption.classList.contains('active')) {
                     currOption.classList.remove('active');
                 } //если установлен актив, то просто снимаем
                 else {
                     document.querySelectorAll('.option').forEach(function(dropdown) {
-                        dropdown.classList.remove('active'); //снимаем актив у всех
+                        dropdown.classList.remove('active'); //снимаем актив у всех   
+						});
                         currOption.classList.add('active'); //добавляем актив к текущему выбору
 
-                    })
+                 
+                }
+				;
+				/*переворачиваем стрелочки*/
+				 if (mark.classList.contains('menu__icon--rotate')) {
+                    mark.classList.remove('menu__icon--rotate');
+                } //если установлен menu__icon--rotate, то просто снимаем
+                else {
+                    document.querySelectorAll('.menu__icon').forEach(function(marks) {
+                        marks.classList.remove('menu__icon--rotate'); //снимаем актив у всех
+						})
+						
+				mark.classList.add('menu__icon--rotate'); //добавляем актив к текущему выбору
+
+                    
                 }
             })
 
@@ -67,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
           slides[i-1].style.backgroundImage="url('../img/gallery/"+i+".jpg')"};*/
     })
     /*option*/
+	
+	
+	/**/
     // Pass single element
 const element = document.querySelector('#selectCustom');
 const choices = new Choices(element, {

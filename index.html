@@ -14,6 +14,10 @@
     <!--SELECT-->
     <!-- Include Choices CSS -->
     <link rel="stylesheet" type="text/CSS" href="script/Choices-master/public/assets/styles/choices.min.css" />
+	<!-- Include base CSS (optional) -->
+<link rel="stylesheet" href="script/Choices-master/public/assets/styles/base.min.css" />
+<!-- Include Choices CSS -->
+<link rel="stylesheet" href="script/Choices-master/public/assets/styles/choices.min.css" />
     <!-- Include Choices JavaScript -->
     <script src="script/Choices-master/public/assets/scripts/choices.min.js"></script>
     <!--accordion-->
@@ -86,9 +90,9 @@
             <div class="container">
                 <div class="header__links">
                     <ul class="header__menu menu list-reset">
-                        <li class="menu__item select list-reset" data-item="1"><button class="menu__link">Реализм<svg
-                                    class="menu__icon" width="10" height="10" viewbox="0 0 12 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <li class="menu__item select list-reset" data-item="1"><button class="menu__link" >Реализм<svg
+                                    class="menu__icon" width="12" height="12" viewbox="0 0 12 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" data-mark="1">
                                     <path d="M11 5L6 10L0.999997 5" stroke="white" />
                                 </svg></button>
                             <ul class="dropdown option list-reset" data-dropdown="1" data-simplebar>
@@ -105,8 +109,8 @@
                             </ul>
                         </li>
 
-                        <li class="menu__item select list-reset" data-item="2"><button class="menu__link">Импрессионизм<svg class="menu__icon" width="10" height="10"
-                                    viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <li class="menu__item select list-reset" data-item="2"><button class="menu__link">Импрессионизм<svg class="menu__icon" width="12" height="12"
+                                    viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-mark="2">
                                     <path d="M11 5L6 10L0.999997 5" stroke="white" />
                                 </svg></button>
                             <ul class="dropdown option list-reset" data-dropdown="2" data-simplebar>
@@ -120,8 +124,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item select list-reset" data-item="3"><button class="menu__link">Постимпрессионизм<svg class="menu__icon" width="10" height="10"
-                                    viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <li class="menu__item select list-reset" data-item="3"><button class="menu__link">Постимпрессионизм<svg class="menu__icon" width="12" height="12"
+                                    viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg" data-mark="3">
                                     <path d="M11 5L6 10L0.999997 5" stroke="white" />
                                 </svg></button>
                             <ul class="dropdown option list-reset" data-dropdown="3" data-simplebar>
@@ -134,9 +138,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu__item select list-reset" data-item="4"><button class="menu__link">Авангард<svg
-                                    class="menu__icon" width="10" height="10" viewbox="0 0 12 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <li class="menu__item select list-reset" data-item="4"><button class="menu__link" >Авангард<svg
+                                    class="menu__icon" width="12" height="12" viewbox="0 0 12 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" data-mark="4">
                                     <path d="M11 5L6 10L0.999997 5" stroke="white" />
                                 </svg></button>
                             <ul class="dropdown option list-reset" data-dropdown="4" data-simplebar>
@@ -147,8 +151,8 @@
                             </ul>
                         </li>
                         <li class="menu__item select list-reset" data-item="5"><button class="menu__link">Футуризм<svg
-                                    class="menu__icon" width="10" height="10" viewbox="0 0 12 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    class="menu__icon" width="12" height="12" viewbox="0 0 12 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" data-mark="5">
                                     <path d="M11 5L6 10L0.999997 5" stroke="white" />
                                 </svg></button>
                             <ul class="dropdown option list-reset" data-dropdown="5" data-simplebar>
@@ -242,7 +246,7 @@
                 <div class="gallery__content">
                     <div class="gallery__left">
                         <h2 class="gallery__header">Галерея</h2>
-                        <p class="gallery__subheader">Фильтровать по:</p>
+                        <p class="gallery__subheader">Фильтр:</p>
                         <select name="select" id="selectCustom" class="js-choice">
                             <option class="gallery__option" value="1"> Автор</option>
                             <option class="gallery__option" value="2" selected> Направление</option>
@@ -386,24 +390,24 @@
                 <div class="catalog__header-block">
                     <h2 class="catalog__header">Каталог</h2>
                     <div class="catalog__flag">
-                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image 4.png" alt="ru"
-                                class="catalog__pic">
+                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image4.png" alt="ru">
+                                
                         </button>
 
-                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image 6.png" alt="ru"
-                                class="catalog__pic">
+                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image6.png" alt="ru"
+                                >
                         </button>
 
-                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image 7.png" alt="ru"
-                                class="catalog__pic">
+                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image7.png" alt="ru"
+                                >
                         </button>
 
-                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image 8.png" alt="ru"
-                                class="catalog__pic">
+                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image8.png" alt="ru"
+                                >
                         </button>
 
-                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image 5.png" alt="ru"
-                                class="catalog__pic">
+                        <button class="catalog__button"> <img class="catalog__pic" src="img/flag/image5.png" alt="ru"
+                                >
                         </button>
                     </div>
 
@@ -415,7 +419,7 @@
                 </div>
                 <div class="catalog__content">
                     <div class="catalog__card card">
-                        <img class="card__picture" src="img/cat1.jpg">
+                        <img class="card__picture" src="img/cat1.jpg" alt="card picture">
                         <h3 class="card__header">Доменико Гирландайо</h3>
                         <p class="card__remark">2 июня 1448 — 11 января 1494</p>
                         <p class="card__description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными
