@@ -34,6 +34,9 @@
     --container-padding-left: 160px;
     --swiper-theme-color: rgb(0, 0, 0, 0);
     --violet-effect-darc:#7943A4;
+    --violet-effect-light:#9D5CD0;
+    --section-padding-top:80px;
+    --section-padding-bottom:80px;
 }
 
 * {
@@ -83,9 +86,7 @@ background-color:rgb(0,0,0,0);
 
 /*бщее для заголовков h2*/
 
-.hero__header,
-.about__header,
-.gallery__header {
+.second__header {
     margin: 0;
 	font-style: normal;
     font-weight: 400;
@@ -235,7 +236,18 @@ background-color:rgb(0,0,0,0);
 }
 
 .menu__icon--rotate{
-	transform: rotate(180deg);
+    /* Точка поворота в правом верхнем углу */
+    -webkit-transform-origin: 50% 67%;
+    -moz-transform-origin: 50% 67%;
+    -o-transform-origin: 50% 67%;
+    -ms-transform-origin: 50% 67%;
+    transform-origin: 50% 67%;
+    /* Поворачиваем на 180 градусов против часовой стрелки */
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .dropdown {
@@ -248,7 +260,6 @@ background-color:rgb(0,0,0,0);
     background-color: rgba(0, 0, 0, 0.4);
     overflow: auto;
     display: none;
-    border-radius: 5px;
     font-size: 14px;
     z-index: 100;
 }
@@ -262,14 +273,16 @@ background-color:rgb(0,0,0,0);
 
 .simplebar-vertical {
     width: 2px !important;
+    top:40px;
 }
 
 .simplebar-track {
     right: 19px !important;
-
+    top: 40px !important;
     width: 2px;
     background-color: black;
 }
+
 
 .dropdown__item:not(last-child) {
     margin-bottom: 20px;
@@ -369,7 +382,7 @@ background-color:rgb(0,0,0,0);
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0);
     background-origin: border-box;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s ease;
     cursor: pointer;
 }
 
@@ -393,6 +406,7 @@ background-color:rgb(0,0,0,0);
 .menu__link:focus {
     background-color: var(--violet-effect-darc);
     color: #fff;
+    outline:none;
 }
 
 .nav__link:hover {
@@ -401,6 +415,7 @@ background-color:rgb(0,0,0,0);
 .nav__link:focus {
 	background-color:var(--violet-effect-darc);
     color: #fff;
+    outline:none;
 }
 
 .nav__link:active {
@@ -428,29 +443,37 @@ background-color:rgb(0,0,0,0);
     /* identical to box height */
 }
 
-.menu__icon {
+.menu__icon{
     position:absolute;
 	top:9px;
 	right:0px;
+
+}
+.menu__icon>path {
+
     transition: stroke .2s ease;
 }
+.menu__link:hover>.menu__icon>path{
 
-.menu__link:hover path {
-    stroke: #9D5CD0;
+    stroke:var(--violet-effect-light);
 }
 
-.menu__link:active path {
+
+
+.menu__link:active>.menu__icon>path {
     stroke: #fff;
+    outline:none;
 }
 
-.menu__link:focus path {
+.menu__link:focus>.menu__icon>path {
     stroke: #fff;
+    outline:none;
 }
 
 .nav__item {
     padding: 0 7px;
     border: 2px solid rgba(0, 0, 0, 0);
-    transition: border-color 0.2s;
+    transition: border-color 0.2s ease;
 }
 
 .nav__link {
@@ -499,6 +522,7 @@ color:#fff;}
 
 .search__input:focus::placeholder{
 	opacity:0;
+    outline:none;
 }
 .header__search {
     height: 40px;
@@ -525,6 +549,7 @@ color:#fff;}
 
 .search__icon:focus {
     border-color: var(--violet-effect-darc);
+    outline:none;
 }
 
 
@@ -552,7 +577,7 @@ transition:fill 0.2s ease;
 fill:#C2B3F3;
 }
 .dropdown__link:hover {
-    border-color: #9D5CD0;
+    border-color: var(--violet-effect-light);
 }
 .search__input:active+.search__line>rect {
 
@@ -563,7 +588,7 @@ fill:#C2B3F3;
 
 .swiper-container {
     max-width: 100%;
-    height: 900px;
+    height: 700px;
 }
 
 .img1 {
@@ -589,8 +614,7 @@ fill:#C2B3F3;
 }
 
 .hero {
-    padding: 200px 0;
-    padding-bottom: 100px;
+    padding: 200px 0 122px 0;
     position: relative;
 }
 
@@ -600,7 +624,7 @@ font-weight: 700;
 font-size: 72px;
 line-height: 79px;
     color: #FFFFFF;
-	transform:translateX(3px);
+	transform:translateX(-2px);
 }
 
 .hero__text {
@@ -620,7 +644,7 @@ line-height: 79px;
     z-index: -1;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 100px;
     right: 0;
     bottom: 0;
 }
@@ -656,9 +680,9 @@ h1 {
     padding: 22px 3px;
     
     vertical-align: top;
-    background: #9D5CD0;
+    background: var(--violet-effect-light);
     border-radius: 100px;
-    border: 2px solid #9D5CD0;
+    border: 2px solid var(--violet-effect-light);
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 700;
@@ -683,8 +707,8 @@ h1 {
     position: absolute;
     top: -4px;
     left: -4px;
-    Width: 314px;
-    Height: 70px;
+    Width: 318px;
+    Height: 74px;
     border: 2px solid rgb(0, 0, 0, 0);
     border-radius: 100px;
     outline: none;
@@ -692,26 +716,27 @@ h1 {
 }
 
 .hero__button:focus {
-    background: #9D5CD0;
+    background: var(--violet-effect-light);
     border-color: #fff;
     outline: none;
 }
 
 .hero__button:focus::after {
-    border: 2px solid #9D5CD0;
+    border: 2px solid var(--violet-effect-light);
+    outline:none;
 }
 
 
 /*********************about**************************/
 
 .about {
-    padding-top: 102px;
+    padding-top: var(--section-padding-top);
     padding-bottom: 71px;
 }
 
 button:active,
 button:focus {
-    outline: #9D5CD0;
+    outline: none;
     background-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -760,7 +785,7 @@ button {
 
 .gallery {
     background: url("../img/gallery/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
-    padding-top: 80px;
+    padding-top: var(--section-padding-top);
     padding-bottom: 77px;
 }
 
@@ -838,8 +863,10 @@ button {
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-    border-radius: 6px;
-    border-color: red;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     /* or 200% */
     color: #999999;
     background-color: rgb(0, 0, 0, 0);
@@ -853,7 +880,7 @@ button {
     color: #999999;
     background-color: rgb(0, 0, 0, 0);
     opacity: 1;
-	border-radius: 6px;
+
 }
 
 .choices__item--selectable {
@@ -863,7 +890,7 @@ button {
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-	border-radius: 6px;
+
 }
 
 .is-selected {
@@ -874,7 +901,7 @@ button {
     padding-top: 0px;
     padding-bottom: 10px;
     opacity: 0.5;
-	border-radius: 6px;
+
 }
 
 
@@ -889,11 +916,10 @@ button {
 
 .choices__inner:hover{
 	background-color:rgb(255,255,255,0.2);
+    color:#fff;
 }
 
-.choices__inner:focus{
-	background-color:rgb(255,255,255,0.2);
-}
+
 
 .choices__inner:after{
 	position:absolute;
@@ -940,12 +966,18 @@ button {
 .choices__list--dropdown .choices__item {
     font-size: 16px;
     padding: 5px 0 0 10px;
-	border-radius: 6px;
+
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted:hover{
-    background-color:rgb(255,255,255,0.2);
+    background-color: rgb(255,255,255,0.4);
+    color:#fff;
 }
+.choices__list--dropdown .choices__item--selectable.is-highlighted{
+    background-color: rgb(0,0,0,0);
+    color:#fff;
+}
+
 
 .gallery__text {
     position: absolute;
@@ -977,8 +1009,8 @@ button {
 }
 
 .gallery__autoriz:hover {
-    color: #9D5CD0;
-    border-bottom-color: #9D5CD0;
+    color: var(--violet-effect-light);
+    border-bottom-color: var(--violet-effect-light);
     /*слайдер галереи*/
 }
 
@@ -1188,7 +1220,7 @@ button {
 }
 
 .gallery-svg-fill:hover {
-    fill: #9D5CD0;
+    fill: var(--violet-effect-light);
 }
 
 .gallery-svg-outline {
@@ -1214,7 +1246,7 @@ button {
 /*catalog*/
 
 .catalog {
-    padding-top: 80px;
+    padding-top:  var(--section-padding-top);
 }
 
 .catalog__header {
@@ -1380,12 +1412,12 @@ button {
 }
 
 .accordion__header:active {
-    background-color: #9D5CD0;
+    background-color: var(--violet-effect-light);
     color: white;
 }
 
 .accordion__header:active {
-    border-color: #9D5CD0;
+    border-color: var(--violet-effect-light);
 }
 
 .ui-icon {
@@ -1414,9 +1446,7 @@ a.ui-button:active,
     border-bottom-color: #cacaca;
 }
 
-.ui-accordion__header:hover>.accordion__button {
-    background-color: salmon;
-}
+
 
 .ui-accordion__header:hover>.accordion__button>.accordion__ico>path {
     fill: #C283F3;
@@ -1425,9 +1455,9 @@ a.ui-button:active,
 .ui-accordion-header:hover {
     font-weight: 600;
     background-color: rgb(0, 0, 0, 0);
-    border-top: 1px solid #9D5CD0;
-    border-bottom: 1px solid #9D5CD0;
-    color: #9D5CD0;
+    border-top: 1px solid var(--violet-effect-light);
+    border-bottom: 1px solid var(--violet-effect-light);
+    color: var(--violet-effect-light);
 }
 
 .ui-accordion-header:hover>.accordion__header+.accordion__button>.accordeon__ico>path {
@@ -1449,7 +1479,18 @@ a.ui-button:active,
 }
 
 .rotator {
-    transform: rotate(180deg);
+        /* Точка поворота в правом верхнем углу */
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        /* Поворачиваем на 180 градусов против часовой стрелки */
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg);
 }
 
 .ui-corner-all,
@@ -1503,7 +1544,7 @@ a.ui-button:active,
 
 .accordeon__btn:hover {
     border-bottom-color: var(--violet-effect-darc);
-    color: #9D5CD0;
+    color: var(--violet-effect-light);
 }
 
 .accordeon__btn:active {
