@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             })
         }
-/*снимем обводку у кнопок слайдера*/
-if (event.target.className != 'gallery-svg-fill') {
+        /*снимем обводку у кнопок слайдера*/
+        if (event.target.className != 'gallery-svg-fill') {
 
-    popup.forEach(function (elem) {
-        elem.classList.remove('.btn_focus');
+            popup.forEach(function (elem) {
+                elem.classList.remove('.btn_focus');
 
-    })
-}
+            })
+        }
     });
 
 
@@ -81,12 +81,9 @@ if (event.target.className != 'gallery-svg-fill') {
 
     })
     const popup = document.querySelectorAll('.dropdown');
+//загружаем контент про италию
+loadNames('it');
 
-    /*Фото для слайдера галереи
-    const slides = document.querySelectorAll('.gallery__swiper-slide');
-    for (let i = 1; i<=slides.length; i++)
-    {console.log(slides[i-1]);
-      slides[i-1].style.backgroundImage="url('../img/gallery/"+i+".jpg')"};*/
 })
 /*option*/
 
@@ -140,6 +137,9 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
             });
             btnFlag.classList.add('push');
         }
+        loadNames(btnFlag.dataset.country);
+
+
     })
 
 
@@ -148,9 +148,8 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 })
 /*accordion */
 
-$(function () {
-    $("#accordion").accordion({ heightStyle: "content" });
-
+$( function() {
+    $( "#accordion" ).accordion();
 });
 /*поворот стрелочки аккордеона */
 /*состояние флага после клика */
@@ -178,9 +177,9 @@ document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
 })
 
 document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
-    button.addEventListener('click', function (e){
+    button.addEventListener('click', function (e) {
         /**/
         e.currentTarget.classList.add('btn_focus');
-       
+
     })
 })
