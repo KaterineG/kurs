@@ -149,10 +149,10 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 /*accordion */
 
 $( function() {
-    $( "#accordion" ).accordion();
+    $( "#accordion" ).accordion({heightStyle: "content"});
 });
 /*поворот стрелочки аккордеона */
-/*состояние флага после клика */
+
 document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
     btnAcc.addEventListener('click', function (elem) {
         const num = elem.currentTarget.dataset.num;
@@ -175,6 +175,17 @@ document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
 
 
 })
+/*заголовки аккордиона */
+let headers = document.querySelectorAll('.accordion__header');
+for (let header of headers){
+    header.addEventListener('click', function(el){
+        for (let head of headers){
+head.classList.remove('accordion__header--focus');
+        }
+el.currentTarget.classList.add('accordion__header--focus');
+
+    })
+}
 
 document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
     button.addEventListener('click', function (e) {

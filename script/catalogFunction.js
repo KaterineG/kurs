@@ -15,7 +15,6 @@
     { 'name': 'Граначчи, Франческо', 'pic': '', 'remark': '', 'description': '' },
     { 'name': 'Грегорио ди Чекко', 'pic': '', 'remark': '', 'description': '' },
     { 'name': 'Джованни да Удине', 'pic': '', 'remark': '', 'description': '' },
-    { 'name': 'Грегорио ди Чекко', 'pic': '', 'remark': '', 'description': '' },
     { 'name': 'Джованни ди Паоло', 'pic': '', 'remark': '', 'description': '' },
     { 'name': 'Джорджоне', 'pic': '', 'remark': '', 'description': '' },
     { 'name': 'Парентино, Бернардо', 'pic': '', 'remark': '', 'description': '' },
@@ -30,7 +29,7 @@
 
 
     function loadNames(country) {
-        
+
         let num;
         let img = document.getElementById('cardPicture');
         let header = document.getElementById('cardName');
@@ -77,7 +76,7 @@
                         li.appendChild(button);
 
                         /*Вешаем событие по художникам */
-                        button.addEventListener('click', function () {
+                        button.addEventListener('click', function (element) {
                             if (countres[num][i][j].pic === '') {
                                 img.setAttribute('src', 'img/artists/nopic.jpg');
                             }
@@ -106,14 +105,18 @@
                                 remark.removeAttribute('hidden');
                             }
 
-
+                            /*красим кнопки-художников*/
+                            let buttons = document.querySelectorAll('.accordeon__btn');
+                            for (let buttonItem of buttons) {
+                                buttonItem.classList.remove('accordeon__btn--focus');
+                            };
+                            element.currentTarget.classList.add('accordeon__btn--focus');
 
                         });
 
                         if (j === 11) {
-                          
-                            button.focus();
-                            button.click();
+
+                            button.classList.add('accordeon__btn--focus');
                         }
 
                     }
@@ -157,7 +160,7 @@
 
     /*функция заполнения пустых аккордионов */
     function emptyAccordion(parent) {
-      
+
 
         for (let l = 0; l < parent.childElementCount; l++) {
             parent.removeChild();
@@ -194,18 +197,18 @@
 
 
     }
-/*затирка пустой карточки */
-function emptyCard(){
-    let img = document.getElementById('cardPicture');
-    let header = document.getElementById('cardName');
-    let desc = document.getElementById('cardDescription');
-    let link = document.getElementById('cardLink');
+    /*затирка пустой карточки */
+    function emptyCard() {
+        let img = document.getElementById('cardPicture');
+        let header = document.getElementById('cardName');
+        let desc = document.getElementById('cardDescription');
+        let link = document.getElementById('cardLink');
         /*очищаем карточку слева */
         img.setAttribute('src', 'img/artists/nopic.jpg');
         header.textContent = "Что мы о нем знаем?";
         desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
         link.removeAttribute('hidden');
-}
+    }
     window.loadNames = loadNames;
 
 })();

@@ -1297,8 +1297,8 @@ button {
     width: 46px;
     height: 46px;
 	position:absolute;
-   bottom:6px;
-    left: 9px; 
+   bottom:8px;
+    left: 8px; 
     background: url(../img/flag/image4.png);
     margin: 0;
 
@@ -1394,7 +1394,7 @@ button {
 }
 
 .card__picture {
-    width: 790px;
+    width: 750px;
     height: 470px;
     margin-bottom: 26px;
 }
@@ -1446,14 +1446,14 @@ button {
 .ui-accordion .ui-accordion-header {
     position: relative;
     margin: 0;
-    padding-top: 43px;
+    padding-top: 46px;
     padding-left: 0;
-    padding-bottom: 47px;
+    padding-bottom: 46px;
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 98%;
+    line-height: 95%;
     text-Align: Left;
     vertical-align: Top;
     color: #333333;
@@ -1469,11 +1469,15 @@ button {
     transition-timing-function: ease;
 }
 
-.accordion__header:active {
+.accordion__header--focus {
     background-color: var(--violet-effect-light);
     color: white;
 }
 
+.accordion__header:focus {
+    background-color: var(--violet-effect-light);
+    color: white;
+}
 .accordion__header:focus {
     border-color: var(--violet-effect-light);
 }
@@ -1536,7 +1540,10 @@ path {
 .ui-accordion-header:hover>.accordion__header+.accordion__button>.accordeon__ico>path {
     fill: #C283F3;
 }
-
+/***********************************************************************************************************/
+.accordion__header--focus+.accordion__button>.accordeon__ico>path {
+    fill: #C283F3;
+}
 .ui-accordion-header>.accordion__header+.accordion__button>.accordeon__ico>path {
     transition: fill 0.2s ease;
 }
@@ -1587,7 +1594,7 @@ path {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 98%;
+    line-height:98%;
     text-Align: Left;
     vertical-align: Top;
     letter-spacing: 0;
@@ -1612,7 +1619,7 @@ path {
 
 .ui-accordion .ui-accordion-content {
     padding-left: 0;
-    padding-top: 27px;
+    padding-top: 26px;
 }
 
 .accordeon__btn:hover {
@@ -1620,14 +1627,19 @@ path {
     color: var(--violet-effect-light);
 }
 
-.accordeon__btn:focus {
+.accordeon__btn:active {
     background-color: var(--violet-effect-darc);
 ;
     color: white;
 }
-
+.accordeon__btn--focus{
+    background-color: var(--violet-effect-darc) !important;
+    color: white !important;
+}
 .accordeon__list {
     padding: 0;
+    padding-top:26px;
+    
     margin: 0;
     list-style: none;
     display: flex;
@@ -1637,12 +1649,10 @@ path {
     overflow: visible;
 }
 
-.ui-accordion-content, .ui-accordion-content-active{
-   
-}
+
 
 .column {
-    height: 319px;
+    max-height: 319px;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -1658,22 +1668,30 @@ path {
 /*стили для отсутствующего контента*/
 .accordeon__blockContainer{
     display: flex;
-    padding-top:25px;
+    padding-top:9px;
 }
 .accordeon__blockRect{
-    width: 173px;
-    height: 114px;
+    width: 272px;
+    height: 185px;
+    padding-left: 8px;
+    padding-top: 14px;
    background-color: #B7B7B7;
    padding: 8px;
-   border: 5px solid #fff;
+   border: 10px solid #fff;
    outline: 2px solid #B7B7B7;
+   transform: translate(2px, -9px);
 }
 
 .accordeon__blockLeft{
     margin-right: 20px;
 }
 
+.accordeon__blockRight{
+    padding-top:30px;
+    padding-left:7px;
+}
 .accordeon__blockTitle{
+
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
@@ -1686,7 +1704,7 @@ path {
 }
 .accordeon__blockParag{
     width: 275px;
-    margin-bottom:15px;
+    margin-bottom:5px;
     
     font-family: 'OpenSans';
 font-style: normal;
@@ -1730,8 +1748,10 @@ color: #333333;
 
 /*решение медленного аккордиона*/
 .ui-accordion .ui-accordion-content {
-    padding: 1px 2.2px;
+    padding: 0;
+    padding-bottom:19px;
 }
 .ui-accordion-content{
     border-bottom: 1px solid #cacaca;
+    max-width: 723px;
 }
