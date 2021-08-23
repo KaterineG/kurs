@@ -117,6 +117,7 @@
                         if (j === 11) {
 
                             button.classList.add('accordeon__btn--focus');
+                            button.click();
                         }
 
                     }
@@ -194,7 +195,17 @@
         right.appendChild(link);
         parent.appendChild(container);
 
-
+/*событие на линк */
+link.addEventListener('click',function(el){
+    if (link.classList.contains('accordeon__blockLink--focus')) {
+        link.classList.remove('accordeon__blockLink--focus');
+    } else {
+        document.querySelectorAll('.accordeon__blockLink').forEach(function (mark) {
+            mark.classList.remove('accordeon__blockLink--focus'); //снимаем актив у всех
+        });
+        link.classList.add('accordeon__blockLink--focus');
+    }
+});
 
     }
     /*затирка пустой карточки */

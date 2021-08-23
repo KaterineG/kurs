@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
     const popup = document.querySelectorAll('.dropdown');
-//загружаем контент про италию
-loadNames('it');
+    //загружаем контент про италию
+    loadNames('it');
 
 })
 /*option*/
@@ -148,8 +148,8 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 })
 /*accordion */
 
-$( function() {
-    $( "#accordion" ).accordion({heightStyle: "content"});
+$(function () {
+    $("#accordion").accordion({ heightStyle: "content" });
 });
 /*поворот стрелочки аккордеона */
 
@@ -176,13 +176,19 @@ document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
 
 })
 /*заголовки аккордиона */
-let headers = document.querySelectorAll('.accordion__header');
-for (let header of headers){
-    header.addEventListener('click', function(el){
-        for (let head of headers){
-head.classList.remove('accordion__header--focus');
+let headers = document.querySelectorAll('.accordion__block');
+let accBtns = document.querySelectorAll('.accordion__header');
+for (let header of headers) {
+    header.addEventListener('click', function (el) {
+        for (let accBtn of accBtns) {
+            accBtn.classList.remove('accordion__header--focus');
+            if (accBtn.dataset.num === el.currentTarget.dataset.block) {
+                accBtn.classList.add('accordion__header--focus');
+            }
         }
-el.currentTarget.classList.add('accordion__header--focus');
+
+
+
 
     })
 }
@@ -193,4 +199,6 @@ document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
         e.currentTarget.classList.add('btn_focus');
 
     })
-})
+});
+
+
