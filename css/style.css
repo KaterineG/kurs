@@ -156,8 +156,7 @@ background-color:rgb(0,0,0,0);
 
 
 .header__button:active {
-    background-color: var(--violet-effect-darc);
-    color: #fff !important;
+    color: #C2B3F3;
 }
 .header__button:active path {
     fill: #fff;
@@ -638,7 +637,7 @@ font-weight: 700;
 font-size: 72px;
 line-height: 79px;
     color: #FFFFFF;
-	transform:translateX(-2px);
+	transform:translateX(-6px);
 }
 
 .hero__text {
@@ -745,7 +744,7 @@ h1 {
 
 .about {
     padding-top: var(--section-padding-top);
-    padding-bottom: 71px;
+    padding-bottom: 69px;
 }
 
 button:active,
@@ -1254,12 +1253,15 @@ button {
     padding: 18px 0 0 50px;
     position: relative;
 }
-
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    right: 18px;
+}
 
 /*catalog*/
 
 .catalog {
     padding-top:  var(--section-padding-top);
+    padding-bottom:  var(--section-padding-bottom);
 }
 
 .catalog__header {
@@ -1290,11 +1292,12 @@ button {
     border: 2px solid rgb(0, 0, 0, 0);
     border-radius: 50px;
     background: none;
-    transition-property: box-shadow-color, border-color;
+    transition-property:filter, border-color;
     transition-duration: 0.2s;
     transition-timing-function: ease;
     cursor: pointer;
     filter: drop-shadow(0px 0px 20px rgba(0,0,0,0));
+
 }
 .catalog__button1::before{
     content:'';
@@ -1397,10 +1400,13 @@ button {
     letter-spacing: 0.04px;
 }
 
+
+
 .card__picture {
     width: 750px;
     height: 470px;
     margin-bottom: 26px;
+
 }
 
 .card__header {
@@ -1415,7 +1421,7 @@ button {
 
 .card__remark {
     margin: 0;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -1492,51 +1498,50 @@ button {
 
 .catalog__sect {
     padding-left: 50px;
-    transform: translateY(-2px);
+    transform: translateY(1px);
 }
 
 path {
     transition: fill 0.2s ease;
 }
-.ui-accordion .ui-accordion-header:not(:first-child){
+.ui-accordion .ui-accordion-header{
     
-    
+    border-top: 1px solid transparent ;
     border-bottom: 1px solid #cacaca;
     
     transition: border-color 0.3s ease;
     cursor: pointer;
     outline: none;
+    transform: translateY(-3px);
 }
 .ui-accordion .ui-accordion-header:first-child{
-    
-    
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid #cacaca ;
     border-bottom: 1px solid #cacaca;
-    transition: border-color 0.3s ease;
-    cursor: pointer;
-    outline: none;
 }
 
 
-.ui-accordion .ui-accordion-header:last-child{
-    
-    
-    border-top: 1px solid #cacaca;
-    border-bottom: 1px solid #cacaca;
-   
-    transition: border-color 0.3s ease;
-    cursor: pointer;
-    outline: none;
-}
 
-
-.ui-accordion-header:hover {
+.ui-accordion .ui-accordion-header:hover {
     font-weight: 600;
     background-color: rgb(0, 0, 0, 0);
-    border-top-color:var(--violet-effect-light);
-    border-bottom-color: var(--violet-effect-light);
+    border-top: 1px solid var(--violet-effect-light);
+    border-bottom:1px solid var(--violet-effect-light);
     color: var(--violet-effect-light);
 }
+
+.ui-accordion-content-active+.accordion__block  {
+    border-top: 1px solid #cacaca;
+    
+}
+
+/*решение медленного аккордиона*/
+.ui-accordion .ui-accordion-content {
+    padding: 0;
+    padding-bottom:24px;
+    transform: translateX(-5px);
+
+}
+
 
 .accordion__block .accordeon__btn-fill{
     transition:fill 0.2s ease ;
@@ -1545,7 +1550,9 @@ path {
 .accordion__block:hover .accordeon__btn-fill{
    fill: #C283F3;
 }
-
+.accordion__block:focus .accordeon__btn-fill{
+    fill: #C283F3;
+ }
 
 .accordion__button {
     height: 53px;
@@ -1616,10 +1623,7 @@ path {
     font-size: 16px;
 }
 
-.ui-accordion .ui-accordion-content {
-    padding-left: 0;
-    padding-top: 26px;
-}
+
 
 .accordeon__btn:hover {
     border-bottom-color: var(--violet-effect-darc);
@@ -1696,11 +1700,12 @@ path {
     margin-bottom:5px;
     
     color: #333333;
+    transform: translateX(6px);
 }
 .accordeon__blockParag{
     width: 275px;
     margin-bottom:5px;
-    
+        transform: translateX(6px);
     font-family: 'OpenSans';
 font-style: normal;
 font-weight: normal;
@@ -1708,9 +1713,14 @@ font-size: 16px;
 line-height: 22px;
 
 color: #333333;
-
+transform: translateX(6px);
 }
-.accordeon__blockLink{
+
+#cardLink{
+    display: none;
+}
+.accordeon__blockLink,#cardLink{
+    
     padding:0 6px;
     font-family: 'OpenSans';
     font-style: normal;
@@ -1721,10 +1731,11 @@ color: #333333;
     text-decoration: none;
     cursor: pointer;
     border-bottom: 1px solid rgb(0, 0, 0, 0);
-    color: #333;
+    color: var(--violet-effect-light);
     transition-duration: 0.2s;
     transition-property: color, background-color,border-color;
     transition-timing-function: ease;
+    
 }
 .accordeon__blockLink:hover {
     color: var(--violet-effect-light);
@@ -1745,17 +1756,11 @@ color: #333333;
 	color:#fff !important;
     /*слайдер галереи*/
 }
-
+.accordeon__blockLink{
+    transform:translateX(-6px);
+}
 .accordeon__blockMargin{
     margin-bottom: 10px;
 }
 
-/*решение медленного аккордиона*/
-.ui-accordion .ui-accordion-content {
-    padding: 0;
-    padding-bottom:19px;
-}
-.ui-accordion-content{
-    border-bottom: 1px solid #cacaca;
 
-}

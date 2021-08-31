@@ -141,7 +141,15 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 
 
     })
-
+    /*при клике на заголовок затираем карточку */
+   
+  document.querySelectorAll('.accordion__block').forEach(function (head){
+   
+   head.addEventListener('click', function(){
+      
+    emptyCard();
+   })
+  })
 
 
 

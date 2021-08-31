@@ -50,6 +50,7 @@
 
 
         if (countres[num] !== undefined) {
+            emptyCard();
             for (let i = 0; i < 6; i++) {
                 let parent = document.querySelector(`[data-content="${i}"]`);
                 if (countres[num][i] !== undefined) {
@@ -77,6 +78,7 @@
 
                         /*Вешаем событие по художникам */
                         button.addEventListener('click', function (element) {
+                           
                             if (countres[num][i][j].pic === '') {
                                 img.setAttribute('src', 'img/artists/nopic.jpg');
                             }
@@ -88,21 +90,23 @@
                             if (countres[num][i][j].description === '') {
                                 header.textContent = "Что мы о нем знаем?";
                                 desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
-                                link.removeAttribute('hidden');
+                                remark.style.display='none';
+                                
                             }
                             else {
+                                
                                 desc.textContent = countres[num][i][j].description;
                                 header.textContent = countres[num][i][j].name;
                                 remark.textContent = countres[num][i][j].remark;
-                                link.setAttribute('hidden', 'true');
+                           
                             }
 
                             if (countres[num][i][j].remark === '') {
-                                remark.setAttribute('hidden', 'true');
+                               
                             }
                             else {
                                 remark.textContent = countres[num][i][j].remark;
-                                remark.removeAttribute('hidden');
+                                
                             }
 
                             /*красим кнопки-художников*/
@@ -118,6 +122,7 @@
 
                             button.classList.add('accordeon__btn--focus');
                             button.click();
+                            
                         }
 
                     }
@@ -127,6 +132,8 @@
 
 
             };
+            let link = document.getElementById('cardLink').style.display = 'none';
+            
         }
         else {/*затираем все */
             let uls = document.querySelectorAll('.accordeon__item');
@@ -161,7 +168,7 @@
 
     /*функция заполнения пустых аккордионов */
     function emptyAccordion(parent) {
-
+       
 
         for (let l = 0; l < parent.childElementCount; l++) {
             parent.removeChild();
@@ -205,12 +212,14 @@ link.addEventListener('click',function(el){
         });
         link.classList.add('accordeon__blockLink--focus');
     }
+    
 });
 
     }
     /*затирка пустой карточки */
     function emptyCard() {
         let img = document.getElementById('cardPicture');
+        let rem = document.getElementById('cardRemark');
         let header = document.getElementById('cardName');
         let desc = document.getElementById('cardDescription');
         let link = document.getElementById('cardLink');
@@ -218,8 +227,12 @@ link.addEventListener('click',function(el){
         img.setAttribute('src', 'img/artists/nopic.jpg');
         header.textContent = "Что мы о нем знаем?";
         desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
-        link.removeAttribute('hidden');
+        rem.style.display='none';
+        link.style.display='block';
     }
-    window.loadNames = loadNames;
 
+
+
+    window.loadNames = loadNames;
+window.emptyCard = emptyCard;
 })();
