@@ -72,7 +72,7 @@
                         li.classList.add('accordeon__item');
 
                         button.textContent = countres[num][i][j].name;
-
+                        button.setAttribute('data-artist',i);
                         parent.appendChild(li);
                         li.appendChild(button);
 
@@ -91,14 +91,15 @@
                                 header.textContent = "Что мы о нем знаем?";
                                 desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
                                 remark.style.display='none';
-                                
+                                link.style.display='block';
                             }
                             else {
                                 
                                 desc.textContent = countres[num][i][j].description;
                                 header.textContent = countres[num][i][j].name;
                                 remark.textContent = countres[num][i][j].remark;
-                           
+                                remark.style.display='block';
+                                link.style.display='none';
                             }
 
                             if (countres[num][i][j].remark === '') {
@@ -132,7 +133,7 @@
 
 
             };
-            let link = document.getElementById('cardLink').style.display = 'none';
+            //let link = document.getElementById('cardLink').style.display = 'block';
             
         }
         else {/*затираем все */
@@ -193,6 +194,9 @@
         title.textContent = 'Здесь пока пусто';
         parag.textContent = 'А в галерее вы всегда можете найти что-то интересное для себя';
         link.textContent = 'В галерею';
+        link.setAttribute('href','#gallery');
+        link.setAttribute('id','cardLink');
+        link.style.display='block';
         container.appendChild(left);
         container.appendChild(right);
 
@@ -230,7 +234,46 @@ link.addEventListener('click',function(el){
         rem.style.display='none';
         link.style.display='block';
     }
+/*событие по художникам */
+function onAccordionListClick(element, num, i,j){
+    if (countres[num][i][j].pic === '') {
+        img.setAttribute('src', 'img/artists/nopic.jpg');
+    }
+    else {
+        img.setAttribute('src', countres[num][i][j].pic);
+    }
 
+
+    if (countres[num][i][j].description === '') {
+        header.textContent = "Что мы о нем знаем?";
+        desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
+        remark.style.display='none';
+        link.style.display='block';
+    }
+    else {
+        
+        desc.textContent = countres[num][i][j].description;
+        header.textContent = countres[num][i][j].name;
+        remark.textContent = countres[num][i][j].remark;
+        remark.style.display='block';
+        link.style.display='none';
+    }
+
+    if (countres[num][i][j].remark === '') {
+       
+    }
+    else {
+        remark.textContent = countres[num][i][j].remark;
+        
+    }
+
+    /*красим кнопки-художников*/
+    let buttons = document.querySelectorAll('.accordeon__btn');
+    for (let buttonItem of buttons) {
+        buttonItem.classList.remove('accordeon__btn--focus');
+    };
+    element.currentTarget.classList.add('accordeon__btn--focus');
+}
 
 
     window.loadNames = loadNames;

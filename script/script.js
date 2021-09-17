@@ -142,14 +142,14 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 
     })
     /*при клике на заголовок затираем карточку */
-   
-  document.querySelectorAll('.accordion__block').forEach(function (head){
-   
-   head.addEventListener('click', function(){
-      
-    emptyCard();
-   })
-  })
+
+    document.querySelectorAll('.accordion__block').forEach(function (head) {
+
+        head.addEventListener('click', function () {
+
+            emptyCard();
+        })
+    })
 
 
 
@@ -159,7 +159,7 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 $(function () {
     $("#accordion").accordion({ heightStyle: "content" });
 });
-/*поворот стрелочки аккордеона */
+/*поворот стрелочки аккордеона клик на хедере */
 
 document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
     btnAcc.addEventListener('click', function (elem) {
@@ -177,7 +177,16 @@ document.querySelectorAll('.accordion__header').forEach(function (btnAcc) {
 
 
         }
-    })
+
+
+        /*фокусируем на первой кнопке и ставим картинку*/
+        let buttons = document.querySelectorAll('.accordeon__btn');
+        for (let buttonItem of buttons) {
+            buttonItem.classList.remove('accordeon__btn--focus');
+        };
+        let buttonFirst = document.querySelector(`[data-artist="${num-1}"]`);
+        buttonFirst.click();
+        })
 
 
 
