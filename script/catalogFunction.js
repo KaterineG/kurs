@@ -113,6 +113,7 @@
                             };
                             element.currentTarget.classList.add('accordeon__btnViolet');
 
+
                         });
 
                         if (j === 11) {

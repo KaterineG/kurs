@@ -1657,6 +1657,11 @@ path {
     color: var(--violet-effect-light);
 }
 
+.accordeon__btn:active {
+    color: #7943A4;
+}
+
+.accordeon__btn:focus,
 .accordeon__btnViolet {
     background-color: var(--violet-effect-darc);
     color: white;
