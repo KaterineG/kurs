@@ -119,6 +119,7 @@
                         if (j === 11) {
 
                             button.classList.add('accordeon__btnViolet');
+
                             button.click();
 
                         }
@@ -186,6 +187,7 @@
         title.classList.add('accordeon__blockTitle');
         parag.classList.add('accordeon__blockParag');
         link.classList.add('accordeon__blockLink');
+        link.classList.add('accordeon__blockLink2');
 
         title.textContent = 'Здесь пока пусто';
         parag.textContent = 'А в галерее вы всегда можете найти что-то интересное для себя';

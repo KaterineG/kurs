@@ -1547,12 +1547,14 @@ path {
 
 /*******************************/
 
+
+/*
 .accordion__block-open {
     border-top: 1px solid var(--violet-effect-light);
     border-bottom: 1px solid var(--violet-effect-light);
-}
+}*/
 
-.accordion__block-open>.accordion__button .accordeon__btn-fill {
+s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     fill: #D1A9F0;
 }
 
@@ -1623,6 +1625,10 @@ path {
     transition-timing-function: ease;
 }
 
+.accordeon__btnViolet {
+    color: #9D5CD0;
+}
+
 .accordeon__btn::after {
     content: "";
     position: absolute;
@@ -1661,8 +1667,7 @@ path {
     color: #7943A4;
 }
 
-.accordeon__btn:focus,
-.accordeon__btnViolet {
+.accordeon__btn:focus {
     background-color: var(--violet-effect-darc);
     color: white;
 }
@@ -1770,6 +1775,10 @@ path {
     transition-duration: 0.2s;
     transition-property: color, background-color, border-color;
     transition-timing-function: ease;
+}
+
+.accordeon__blockLink2 {
+    padding: 0 12px !important;
 }
 
 #cardLink::after {
