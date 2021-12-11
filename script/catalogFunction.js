@@ -39,11 +39,11 @@
         let header = document.getElementById('cardName');
         let remark = document.getElementById('cardRemark');
         let desc = document.getElementById('cardDescription');
-        let link = document.getElementById('cardLink');
+        let link = document.getElementById('cardlink');
         if (country === 'it') {
             num = 0;
         } else if (country === 'fr') { num = 1 } else if (country === 'ru') { num = 2 } else if (country === 'ge') { num = 3 } else if (country === 'is') { num = 4 } else num = -1;
-        /*<li class="accordeon__item"> <button class="accordeon__btn">Бенедетто де
+        /*<li class="accordion__item"> <button class="accordion__btn">Бенедетто де
                                             Биндо</button></li> */
 
 
@@ -53,7 +53,7 @@
             for (let i = 0; i < 6; i++) {
                 let parent = document.querySelector(`[data-content="${i}"]`);
                 if (countres[num][i] !== undefined) {
-                    let blocks = document.querySelectorAll('.accordeon__blockContainer');
+                    let blocks = document.querySelectorAll('.accordion__blockContainer');
 
                     for (block of blocks) {
 
@@ -67,8 +67,8 @@
                         let button = document.createElement('button');
                         let li = document.createElement('li');
 
-                        button.classList.add('accordeon__btn');
-                        li.classList.add('accordeon__item');
+                        button.classList.add('accordion__btn');
+                        li.classList.add('accordion__item');
 
                         button.textContent = countres[num][i][j].name;
                         button.setAttribute('data-artist', i);
@@ -107,18 +107,18 @@
                             }
 
                             /*красим кнопки-художников*/
-                            let buttons = document.querySelectorAll('.accordeon__btn');
+                            let buttons = document.querySelectorAll('.accordion__btn');
                             for (let buttonItem of buttons) {
-                                buttonItem.classList.remove('accordeon__btnViolet');
+                                buttonItem.classList.remove('accordion__btnViolet');
                             };
-                            element.currentTarget.classList.add('accordeon__btnViolet');
+                            element.currentTarget.classList.add('accordion__btnViolet');
 
 
                         });
 
                         if (j === 11) {
 
-                            button.classList.add('accordeon__btnViolet');
+                            button.classList.add('accordion__btnViolet');
 
                             button.click();
 
@@ -131,17 +131,17 @@
 
 
             };
-            //let link = document.getElementById('cardLink').style.display = 'block';
+            //let link = document.getElementById('cardlink').style.display = 'block';
 
         } else { /*затираем все */
-            let uls = document.querySelectorAll('.accordeon__item');
+            let uls = document.querySelectorAll('.accordion__item');
 
             for (ul of uls) {
 
                 ul.remove();
 
             }
-            let blocks = document.querySelectorAll('.accordeon__blockContainer');
+            let blocks = document.querySelectorAll('.accordion__blockContainer');
 
             for (block of blocks) {
 
@@ -180,20 +180,21 @@
         let link = document.createElement('a');
 
 
-        container.classList.add('accordeon__blockContainer');
-        right.classList.add('accordeon__blockRight');
-        rectangle.classList.add('accordeon__blockRect');
-        left.classList.add('accordeon__blockLeft');
-        title.classList.add('accordeon__blockTitle');
-        parag.classList.add('accordeon__blockParag');
-        link.classList.add('accordeon__blockLink');
-        link.classList.add('accordeon__blockLink2');
+        container.classList.add('accordion__blockContainer');
+        right.classList.add('accordion__blockRight');
+        rectangle.classList.add('accordion__blockRect');
+        left.classList.add('accordion__blockLeft');
+        title.classList.add('accordion__blockTitle');
+        parag.classList.add('accordion__blockParag');
+        link.classList.add('card__blocklink');
+
 
         title.textContent = 'Здесь пока пусто';
         parag.textContent = 'А в галерее вы всегда можете найти что-то интересное для себя';
         link.textContent = 'В галерею';
         link.setAttribute('href', '#gallery');
-        link.setAttribute('id', 'cardLink');
+        link.setAttribute('id', 'cardlink');
+
         link.style.display = 'block';
         container.appendChild(left);
         container.appendChild(right);
@@ -206,13 +207,13 @@
 
         /*событие на линк */
         link.addEventListener('click', function(el) {
-            if (link.classList.contains('accordeon__blockLink--focus')) {
-                link.classList.remove('accordeon__blockLink--focus');
+            if (link.classList.contains('card__blocklink--focus')) {
+                link.classList.remove('card__blocklink--focus');
             } else {
-                document.querySelectorAll('.accordeon__blockLink').forEach(function(mark) {
-                    mark.classList.remove('accordeon__blockLink--focus'); //снимаем актив у всех
+                document.querySelectorAll('.card__blocklink').forEach(function(mark) {
+                    mark.classList.remove('card__blocklink--focus'); //снимаем актив у всех
                 });
-                link.classList.add('accordeon__blockLink--focus');
+                link.classList.add('card__blocklink--focus');
             }
 
         });
@@ -224,13 +225,14 @@
         let rem = document.getElementById('cardRemark');
         let header = document.getElementById('cardName');
         let desc = document.getElementById('cardDescription');
-        let link = document.getElementById('cardLink');
+        let linkc = document.getElementById('cardlink');
+        linkc.classList.add('card__blocklink2');
         /*очищаем карточку слева */
         img.setAttribute('src', 'img/artists/nopic.jpg');
         header.textContent = "Что мы о нем знаем?";
         desc.textContent = 'Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!';
         rem.style.display = 'none';
-        link.style.display = 'block';
+        linkc.style.display = 'block';
     }
     /*событие по художникам */
     function onAccordionListClick(element, num, i, j) {
@@ -263,11 +265,11 @@
         }
 
         /*красим кнопки-художников*/
-        let buttons = document.querySelectorAll('.accordeon__btn');
+        let buttons = document.querySelectorAll('.accordion__btn');
         for (let buttonItem of buttons) {
-            buttonItem.classList.remove('accordeon__btn--focus');
+            buttonItem.classList.remove('accordion__btn--focus');
         };
-        element.currentTarget.classList.add('accordeon__btn--focus');
+        element.currentTarget.classList.add('accordion__btn--focus');
     }
 
 

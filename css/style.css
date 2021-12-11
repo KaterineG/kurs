@@ -94,7 +94,7 @@ body {
 
 /*бщее для заголовков h2*/
 
-.second__header {
+.secondheader {
     margin: 0;
     font-style: normal;
     font-weight: 400;
@@ -1389,7 +1389,7 @@ button {
     border-radius: 50px;
 }
 
-.content__text {
+.catalog__content-text {
     max-width: 1090px;
     margin: 0;
     margin-bottom: 40px;
@@ -1528,37 +1528,35 @@ path {
     transform: translateX(-5px);
 }
 
-.accordion__block .accordeon__btn-fill {
+.accordion__block .accordion__btn-fill {
     transition: fill 0.2s ease;
 }
 
-.accordion__block:hover .accordeon__btn-fill {
+.accordion__block:hover .accordion__btn-fill {
     fill: #C283F3;
 }
 
-.accordion__block:focus .accordeon__btn-fill {
+.accordion__block:focus .accordion__btn-fill {
     fill: #D1A9F0;
 }
 
-.accordion__block:focus .accordeon__btn-fill+path {
+.accordion__block:focus .accordion__btn-fill+path {
     stroke: #9D5CD0;
 }
 
 
 /*******************************/
 
-
-/*
-.accordion__block-open {
+.accordion__block-openen {
     border-top: 1px solid var(--violet-effect-light);
     border-bottom: 1px solid var(--violet-effect-light);
-}*/
+}
 
-s .accordion__block-open>.accordion__button .accordeon__btn-fill {
+.accordion__block-openen.accordion__button .accordion__btn-fill {
     fill: #D1A9F0;
 }
 
-.accordion__block-open .accordion__button .accordeon__btn-fill+path {
+.accordion__block-openen .accordion__button .accordion__btn-fill+path {
     stroke: #9D5CD0;
 }
 
@@ -1604,7 +1602,7 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     border-top-left-radius: 0;
 }
 
-.accordeon__btn {
+.accordion__btn {
     position: relative;
     z-index: 1;
     margin: 0;
@@ -1625,11 +1623,11 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transition-timing-function: ease;
 }
 
-.accordeon__btnViolet {
+.accordion__btnViolet {
     color: #9D5CD0;
 }
 
-.accordeon__btn::after {
+.accordion__btn::after {
     content: "";
     position: absolute;
     width: calc(100% - 12px);
@@ -1641,11 +1639,11 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transition: border-color 0.2s ease-in-out;
 }
 
-.accordeon__btn:hover::after {
+.accordion__btn:hover::after {
     border-color: var(--violet-effect-light);
 }
 
-.accordeon__btn:focus::after {
+.accordion__btn:focus::after {
     border-color: rgb(0, 0, 0, 0);
 }
 
@@ -1659,20 +1657,20 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     font-size: 16px;
 }
 
-.accordeon__btn:hover {
+.accordion__btn:hover {
     color: var(--violet-effect-light);
 }
 
-.accordeon__btn:active {
+.accordion__btn:active {
     color: #7943A4;
 }
 
-.accordeon__btn:focus {
+.accordion__btn:focus {
     background-color: var(--violet-effect-darc);
     color: white;
 }
 
-.accordeon__list {
+.accordion__list {
     padding: 0;
     padding-top: 24px;
     max-width: 723px;
@@ -1703,12 +1701,12 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
 
 /*стили для отсутствующего контента*/
 
-.accordeon__blockContainer {
+.accordion__blockContainer {
     display: flex;
     padding-top: 9px;
 }
 
-.accordeon__blockRect {
+.accordion__blockRect {
     width: 272px;
     height: 185px;
     padding-left: 8px;
@@ -1720,16 +1718,16 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transform: translate(2px, -9px);
 }
 
-.accordeon__blockLeft {
+.accordion__blockLeft {
     margin-right: 20px;
 }
 
-.accordeon__blockRight {
+.accordion__blockRight {
     padding-top: 30px;
     padding-left: 7px;
 }
 
-.accordeon__blockTitle {
+.accordion__blockTitle {
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
@@ -1741,7 +1739,7 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transform: translateX(6px);
 }
 
-.accordeon__blockParag {
+.accordion__blockParag {
     width: 275px;
     margin-bottom: 5px;
     transform: translateX(6px);
@@ -1754,14 +1752,10 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transform: translateX(6px);
 }
 
-#cardLink {
-    display: none;
-}
-
-.accordeon__blockLink,
-#cardLink {
+.card__blocklink,
+.card__blocklink2 {
     width: max-content;
-    padding: 0 6px;
+    padding: 0 12px;
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
@@ -1771,17 +1765,17 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     text-decoration: none;
     cursor: pointer;
     border-bottom: 1px solid rgb(0, 0, 0, 0);
-    color: var(--violet-effect-light);
+    color: var(--violet-effect-light) !important;
     transition-duration: 0.2s;
     transition-property: color, background-color, border-color;
     transition-timing-function: ease;
 }
 
-.accordeon__blockLink2 {
-    padding: 0 12px !important;
+.card__blocklink2 {
+    padding: 0 6px !important;
 }
 
-#cardLink::after {
+.card__blocklink::after {
     content: "";
     position: absolute;
     width: calc(100% - 12px);
@@ -1793,30 +1787,30 @@ s .accordion__block-open>.accordion__button .accordeon__btn-fill {
     transition: border-color 0.2s ease-in-out;
 }
 
-#cardLink:hover::after {
+.card__blocklink:hover::after {
     color: var(--violet-effect-light);
     border-bottom-color: var(--violet-effect-light);
     /*слайдер галереи*/
 }
 
-#cardLink:active {
+.card__blocklink:active {
     background-color: var(--violet-effect-light);
     border-bottom-color: rgb(0, 0, 0, 0);
     color: #fff;
     /*слайдер галереи*/
 }
 
-#cardLink:focus {
+.card__blocklink:focus {
     background-color: var(--violet-effect-light);
     border-bottom-color: rgb(0, 0, 0, 0);
     color: #fff;
     /*слайдер галереи*/
 }
 
-.accordeon__blockLink {
+.card__blocklink {
     transform: translateX(-6px);
 }
 
-.accordeon__blockMargin {
+.accordion__blockMargin {
     margin-bottom: 10px;
 }

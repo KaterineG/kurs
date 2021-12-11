@@ -148,9 +148,9 @@ document.querySelectorAll('.catalog__button').forEach(function(btnFlag) {
 
                 emptyCard();
                 document.querySelectorAll('.accordion__block').forEach(function(ab) {
-                    ab.classList.remove('accordion__block-open');
+                    ab.classList.remove('accordion__block-openen');
                 });
-                head.classList.add('accordion__block-open');
+                head.classList.add('accordion__block-openen');
 
             })
         })
@@ -186,9 +186,9 @@ document.querySelectorAll('.accordion__header').forEach(function(btnAcc) {
 
 
             /*фокусируем на первой кнопке и ставим картинку*/
-            let buttons = document.querySelectorAll('.accordeon__btn');
+            let buttons = document.querySelectorAll('.accordion__btn');
             for (let buttonItem of buttons) {
-                buttonItem.classList.remove('accordeon__btnViolet');
+                buttonItem.classList.remove('accordion__btnViolet');
             };
             let buttonFirst = document.querySelector(`[data-artist="${num-1}"]`);
             buttonFirst.click();
