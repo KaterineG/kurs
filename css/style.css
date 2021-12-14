@@ -1552,7 +1552,7 @@ path {
     border-bottom: 1px solid var(--violet-effect-light);
 }
 
-.accordion__block-openen.accordion__button .accordion__btn-fill {
+.accordion__block-openen .accordion__button .accordion__btn-fill {
     fill: #D1A9F0;
 }
 
@@ -1701,12 +1701,12 @@ path {
 
 /*стили для отсутствующего контента*/
 
-.accordion__blockContainer {
+.accordion__blockcontainer {
     display: flex;
     padding-top: 9px;
 }
 
-.accordion__blockRect {
+.accordion__blockrect {
     width: 272px;
     height: 185px;
     padding-left: 8px;
@@ -1718,16 +1718,16 @@ path {
     transform: translate(2px, -9px);
 }
 
-.accordion__blockLeft {
+.accordion__blockleft {
     margin-right: 20px;
 }
 
-.accordion__blockRight {
+.accordion__blockright {
     padding-top: 30px;
     padding-left: 7px;
 }
 
-.accordion__blockTitle {
+.accordion__blocktitle {
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
@@ -1739,7 +1739,7 @@ path {
     transform: translateX(6px);
 }
 
-.accordion__blockParag {
+.accordion__blockparag {
     width: 275px;
     margin-bottom: 5px;
     transform: translateX(6px);
@@ -1755,7 +1755,7 @@ path {
 .card__blocklink,
 .card__blocklink2 {
     width: max-content;
-    padding: 0 12px;
+    padding: 0 11px;
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 600;
@@ -1772,7 +1772,7 @@ path {
 }
 
 .card__blocklink2 {
-    padding: 0 6px !important;
+    padding: 0 5px !important;
 }
 
 .card__blocklink::after {
@@ -1811,6 +1811,6 @@ path {
     transform: translateX(-6px);
 }
 
-.accordion__blockMargin {
+.accordion__blockmargin {
     margin-bottom: 10px;
 }

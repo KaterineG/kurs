@@ -191,7 +191,8 @@ document.querySelectorAll('.accordion__header').forEach(function(btnAcc) {
                 buttonItem.classList.remove('accordion__btnViolet');
             };
             let buttonFirst = document.querySelector(`[data-artist="${num-1}"]`);
-            buttonFirst.click();
+            if (buttonFirst)
+                buttonFirst.click();
         })
 
 

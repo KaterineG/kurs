@@ -53,7 +53,7 @@
             for (let i = 0; i < 6; i++) {
                 let parent = document.querySelector(`[data-content="${i}"]`);
                 if (countres[num][i] !== undefined) {
-                    let blocks = document.querySelectorAll('.accordion__blockContainer');
+                    let blocks = document.querySelectorAll('.accordion__blockcontainer');
 
                     for (block of blocks) {
 
@@ -141,7 +141,7 @@
                 ul.remove();
 
             }
-            let blocks = document.querySelectorAll('.accordion__blockContainer');
+            let blocks = document.querySelectorAll('.accordion__blockcontainer');
 
             for (block of blocks) {
 
@@ -180,12 +180,12 @@
         let link = document.createElement('a');
 
 
-        container.classList.add('accordion__blockContainer');
-        right.classList.add('accordion__blockRight');
-        rectangle.classList.add('accordion__blockRect');
-        left.classList.add('accordion__blockLeft');
-        title.classList.add('accordion__blockTitle');
-        parag.classList.add('accordion__blockParag');
+        container.classList.add('accordion__blockcontainer');
+        right.classList.add('accordion__blockright');
+        rectangle.classList.add('accordion__blockrect');
+        left.classList.add('accordion__blockleft');
+        title.classList.add('accordion__blocktitle');
+        parag.classList.add('accordion__blockparag');
         link.classList.add('card__blocklink');
 
 
