@@ -97,7 +97,7 @@ const choices = new Choices(element, {
 });
 
 /*swiper */
-const swiperGslery = new Swiper('.gallery__swiper-container', {
+const swiperGalery = new Swiper('.gallery__swiper-container', {
     // Optional parameters
 
 
@@ -120,8 +120,7 @@ const swiperGslery = new Swiper('.gallery__swiper-container', {
 
     },
     slideClass: 'gallery__swiper-slide',
-    slidesPerColumn: 2,
-    slidesPerView: 3,
+    slidesPerView:3,
     spaceBetween: 50,
 });
 
@@ -175,9 +174,9 @@ document.querySelectorAll('.accordion__header').forEach(function(btnAcc) {
             } //если установлен поворот, то просто снимаем
             else {
                 document.querySelectorAll('.accordion__button').forEach(function(activBtn) {
-                    activBtn.classList.remove('rotator'); //снимаем актив у всех
+                    activBtn.classList.add('rotator'); //снимаем актив у всех
                 })
-                button.classList.add('rotator'); //добавляем актив к текущему выбору
+                button.classList.remove('rotator'); //добавляем актив к текущему выбору
                 //////добавляем открытый класс
                 button.classList.add('accordion__block-open');
 
@@ -223,4 +222,30 @@ document.querySelectorAll('.gallery-svg-fill').forEach(function(button) {
         e.currentTarget.classList.add('btn_focus');
 
     })
+});
+/*events-swiper */
+const swiperEvents = new Swiper('.events__swiper', {
+  // Optional parameters
+  // If we need pagination
+    // Navigation arrows
+    navigation: {
+      nextEl: '.events__swiper-button-next',
+      prevEl: '.events__swiper-button-prev',
+  },
+  slideClass: 'events__swiper-slide',
+  slidesPerView:3,
+  spaceBetween: 50,
+});
+
+/*красим точку в выборе */
+
+
+document.querySelectorAll('.option__item').forEach(function(option){
+  option.addEventListener('click', function(el){
+    document.querySelectorAll('.option__item').forEach(function(e){
+      e.classList.remove('option__checked');
+    });
+   el.currentTarget.classList.add('option__checked');
+   
+   });
 });
