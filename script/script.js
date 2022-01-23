@@ -183,8 +183,6 @@ document.querySelectorAll('.accordion__block').forEach(function(btnAcc) {//ис�
 
 
             }
-
-
             /*фокусируем на первой кнопке и ставим картинку*/
             let buttons = document.querySelectorAll('.accordion__btn');
             for (let buttonItem of buttons) {
@@ -194,11 +192,9 @@ document.querySelectorAll('.accordion__block').forEach(function(btnAcc) {//ис�
             if (buttonFirst)
                 buttonFirst.click();
         })
-
-
-
-
     })
+
+   
     /*заголовки аккордиона */
 let headers = document.querySelectorAll('.accordion__block');
 let accBtns = document.querySelectorAll('.accordion__header');
