@@ -164,9 +164,10 @@ $(function() {
 });
 /*поворот стрелочки аккордеона клик на хедере */
 
-document.querySelectorAll('.accordion__header').forEach(function(btnAcc) {
+document.querySelectorAll('.accordion__block').forEach(function(btnAcc) {//исправлено 23ю01
         btnAcc.addEventListener('click', function(elem) {
-            const num = elem.currentTarget.dataset.num;
+            const num = elem.currentTarget.dataset.block;
+            console.log(elem.currentTarget.dataset.block);
             const button = document.querySelector(`[data-button="${num}"]`); //кнопка
 
             if (button.classList.contains('active')) {
