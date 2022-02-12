@@ -158,36 +158,28 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
     loadNames(btnFlag.dataset.country);
 
 
-  })
+  });
   /*при клике на заголовок затираем карточку */
-
-  document.querySelectorAll('.accordion__block').forEach(function (head) {
-
-    head.addEventListener('click', function () {
-
-      emptyCard();
-      document.querySelectorAll('.accordion__block').forEach(function (ab) {
-        ab.classList.remove('accordion__block-openen');
-      });
-      head.classList.add('accordion__block-openen');
-
-    })
-  })
-
-
-
-})
-/*accordion */
-
-$(function () {
-  $("#accordion").accordion({ heightStyle: "content" });
 });
-/*поворот стрелочки аккордеона клик на хедере */
 
-document.querySelectorAll('.accordion__block').forEach(function (btnAcc) {//исправлено 23ю01
-  btnAcc.addEventListener('click', function (elem) {
+
+
+document.querySelectorAll('.accordion__block').forEach(function (head) {
+  console.log(head);
+  head.addEventListener('click', function () {
+
+    emptyCard();
+    //выделим все заголовки и снимем класс открытый
+    document.querySelectorAll('.accordion__block').forEach(function (ab) {
+      ab.classList.remove('accordion__block-open');
+    });
+
+    head.classList.add('accordion__block-open');
+
+  })
+  //установка поворота стрелочки
+  head.addEventListener('click', function (elem) {
     const num = elem.currentTarget.dataset.block;
-    console.log(elem.currentTarget.dataset.block);
     const button = document.querySelector(`[data-button="${num}"]`); //кнопка
 
     if (button.classList.contains('active')) {
@@ -199,7 +191,7 @@ document.querySelectorAll('.accordion__block').forEach(function (btnAcc) {//ис
       })
       button.classList.remove('rotator'); //добавляем актив к текущему выбору
       //////добавляем открытый класс
-      button.classList.add('accordion__block-open');
+
 
 
     }
@@ -215,23 +207,19 @@ document.querySelectorAll('.accordion__block').forEach(function (btnAcc) {//ис
 })
 
 
-/*заголовки аккордиона */
-let headers = document.querySelectorAll('.accordion__block');
-let accBtns = document.querySelectorAll('.accordion__header');
-for (let header of headers) {
-  header.addEventListener('click', function (el) {
-    for (let accBtn of accBtns) {
-      accBtn.classList.remove('accordion__headerViolet');
-      if (accBtn.dataset.num === el.currentTarget.dataset.block) {
-        accBtn.classList.add('accordion__headerViolet');
-      }
-    }
+
+
+/*accordion */
+
+$(function () {
+  $("#accordion").accordion({ heightStyle: "content" });
+});
+/*поворот стрелочки аккордеона клик на хедере */
 
 
 
 
-  })
-}
+
 
 document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
   button.addEventListener('click', function (e) {
@@ -293,27 +281,20 @@ document.querySelectorAll('.option__item').forEach(function (option) {
 
 const projectswiper = new Swiper('.project__swiper', {
   // Optional parameters
-
-
-
+   loop: true,
+   slidesPerView:3,
+   spaceBetween: 50,
   // If we need pagination
   pagination: {
-    el: '.project__swiper-pagination',
+    el: 'project__swiper-pagination',
   },
-
+  slideClass: 'project__swiper-slide',
   // Navigation arrows
   navigation: {
     nextEl: '.project__swiper-button-next',
     prevEl: '.project__swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.project__swiper-scrollbar',
-  },
-  slideClass: 'project__swiper-slide',
-  wrapperClass: 'project__swiper-wrapper',
-  spaceBetween: 50,
 });
 
 
