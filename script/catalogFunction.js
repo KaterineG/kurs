@@ -74,6 +74,7 @@
             button.setAttribute('data-artist', i);
             parent.appendChild(li);
             li.appendChild(button);
+            button.setAttribute('aria-label','Кнопка показа информации по художнику');
 
             /*Вешаем событие по художникам */
             button.addEventListener('click', function (element) {
@@ -194,7 +195,7 @@
     link.textContent = 'В галерею';
     link.setAttribute('href', '#gallery');
     link.setAttribute('id', 'cardlink');
-
+    link.setAttribute('aria-label','Переход на страницу галереи');
     link.style.display = 'block';
     container.appendChild(left);
     container.appendChild(right);
@@ -226,6 +227,8 @@
     let header = document.getElementById('cardName');
     let desc = document.getElementById('cardDescription');
     let linkc = document.getElementById('cardlink');
+    linkc.setAttribute('aria-label','Переход на страницу галереи');
+
     linkc.classList.add('card__blocklink2');
     /*очищаем карточку слева */
     img.setAttribute('src', 'img/artists/nopic.jpg');
