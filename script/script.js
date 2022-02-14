@@ -167,7 +167,7 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 
 
 document.querySelectorAll('.accordion__block').forEach(function (head) {
-  console.log(head);
+  
   head.addEventListener('click', function () {
 
     emptyCard();
