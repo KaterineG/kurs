@@ -119,28 +119,30 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 34
-    },
-    // when window width is >= 640px
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 38
-    },
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 34
-    },
+
     1920: {
       slidesPerView: 3,
       spaceBetween: 50
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 34
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
     }
+
+
   }
 });
 
@@ -281,9 +283,9 @@ document.querySelectorAll('.option__item').forEach(function (option) {
 
 const projectswiper = new Swiper('.project__swiper', {
   // Optional parameters
-   loop: true,
-   slidesPerView:3,
-   spaceBetween: 50,
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 50,
   // If we need pagination
   pagination: {
     el: 'project__swiper-pagination',

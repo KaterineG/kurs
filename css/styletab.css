@@ -96,15 +96,15 @@
       }
 
       .gallery__swiper-container {
-        width: 594px !important;
+        width: 594px;
         height: 315px;
         overflow: hidden;
       }
-
+/*
       .gallery__swiper-slide {
         width: 280px !important;
       }
-
+*/
       .card__picture {
         width: 437px;
         height: 274px;
@@ -143,8 +143,10 @@
       .magnifier {
         width: 260px;
         height: 260px;
-        top: 30px;
-        left: 0;
+
+          top: calc(50% - 130px);
+          left: calc(50% - 130px);
+ 
       }
 
       .events__cover {
