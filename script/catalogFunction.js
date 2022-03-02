@@ -112,17 +112,14 @@
               for (let buttonItem of buttons) {
                 buttonItem.classList.remove('accordion__btnViolet');
               };
-              element.currentTarget.classList.add('accordion__btnViolet');
+             // element.currentTarget.classList.add('accordion__btnViolet');
 
 
             });
 
             if (j === 11) {
-
-              button.classList.add('accordion__btnViolet');
-
               button.click();
-
+              button.classList.add('accordion__btnViolet');
             }
 
           }

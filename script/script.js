@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       })
     }
+
     /*снимем обводку у кнопок слайдера*/
     if (event.target.className != 'gallery-svg-fill') {
 
@@ -119,13 +120,12 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
-
     1920: {
       slidesPerView: 3,
       spaceBetween: 50
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 34
     },
     // when window width is >= 640px
@@ -167,13 +167,14 @@ document.querySelectorAll('.catalog__button').forEach(function (btnFlag) {
 
 
 document.querySelectorAll('.accordion__block').forEach(function (head) {
-  
+
   head.addEventListener('click', function () {
 
     emptyCard();
     //выделим все заголовки и снимем класс открытый
     document.querySelectorAll('.accordion__block').forEach(function (ab) {
       ab.classList.remove('accordion__block-open');
+      ab.classList.remove('accordionload');
     });
 
     head.classList.add('accordion__block-open');
@@ -240,48 +241,48 @@ const swiperEvents = new Swiper('.events__swiper', {
     prevEl: '.events__swiper-button-prev',
   },
   slideClass: 'events__swiper-slide',
-
   pagination: {
     el: '.events__swiper-pagination',
     type: 'bullets',
   },
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 320px
-
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 40,
-
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 34
-    },
-    1920: {
-      slidesPerView: 3,
-      spaceBetween: 50
-    }
+  slidesPerView: 3,
+  spaceBetween: 50,
+   // when window width is >= 320px
+  1920: {
+    slidesPerView: 3,
+    spaceBetween: 50
+  },
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 27
+  },
+  // when window width is >= 640px
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 34
+  },    // when window width is >= 480px
+  320: {
+    slidesPerView: 1
   }
 });
 
 /*красим точку в выборе */
 
-
+function addcheck(elem) {
+  document.querySelectorAll('.option__item').forEach(function (el) {
+    el.classList.remove('optionchecked');
+    el.classList.remove('defaultchecked');
+  });
+  elem.currentTarget.classList.add('optionchecked');
+}
 document.querySelectorAll('.option__item').forEach(function (option) {
   option.addEventListener('click', function (el) {
-    document.querySelectorAll('.option__item').forEach(function (e) {
-      e.classList.remove('option__checked');
-    });
-    el.currentTarget.classList.add('option__checked');
+    addcheck(el);
 
   });
 });
 
-const projectswiper = new Swiper('.project__swiper', {
+const projectwiper = new Swiper('.project__swiper', {
   // Optional parameters
   loop: true,
   slidesPerView: 3,
@@ -312,7 +313,7 @@ document.querySelectorAll('.project__swiper-slide').forEach(function (el) {
 
   })
 });
-document.querySelector('.callback__form').addEventListener('submit', function (event) {
+document.querySelector('.contacts__form').addEventListener('submit', function (event) {
   event.preventDefault();
   let namevalue = document.querySelector('.contacts__name');
   let tel = document.querySelector('.contacts__tel');
@@ -339,3 +340,20 @@ document.querySelector('.header__burger').addEventListener('click', function () 
 document.querySelector('.header__close').addEventListener('click', function () {
   document.querySelector('.header__mobil').style.display = 'none';
 })
+
+
+
+
+/**tab-event */
+document.addEventListener('keyup', function (event) {
+
+  if (event.key == 'Tab' && event.target.classList.value == 'option__check') {
+
+    document.querySelectorAll('.option__item').forEach(function (e) {
+      e.classList.remove('defaultchecked');
+      e.classList.remove('optionchecked');
+
+    });
+    event.target.parentNode.classList.add('optionchecked');
+  }
+});
