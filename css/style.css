@@ -127,6 +127,7 @@
 
     .header__burger {
       background-color: rgb(0, 0, 0, 0);
+      background-image: url("Burger.png");
     }
 
     .logo:hover {
@@ -2578,7 +2579,7 @@
       overflow: hidden;
       justify-content: space-between;
       width: 100%;
-      min-height: 700px;
+      height: 100%;
       /*transform: translateX(-3px);*/
     }
 

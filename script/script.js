@@ -44,6 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       })
     }
+    const screenWidth = window.screen.width;
+console.log(screenWidth);
+    if(screenWidth <= 320){
+      document.querySelector('.contacts__submit').textContent = "Заказать";
+    }
   });
 
 
@@ -247,22 +252,24 @@ const swiperEvents = new Swiper('.events__swiper', {
   },
   slidesPerView: 3,
   spaceBetween: 50,
-   // when window width is >= 320px
-  1920: {
-    slidesPerView: 3,
-    spaceBetween: 50
-  },
-  1024: {
-    slidesPerView: 3,
-    spaceBetween: 27
-  },
-  // when window width is >= 640px
-  768: {
-    slidesPerView: 2,
-    spaceBetween: 34
-  },    // when window width is >= 480px
-  320: {
-    slidesPerView: 1
+  // when window width is >= 320px
+  breakpoints: {
+    1920: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 27
+    },
+    // when window width is >= 640px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },    // when window width is >= 480px
+    320: {
+      slidesPerView: 1
+    }
   }
 });
 
@@ -287,6 +294,19 @@ const projectwiper = new Swiper('.project__swiper', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 50,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
+    320: {
+      slidesPerView: 1
+    }
+  },
   // If we need pagination
   pagination: {
     el: 'project__swiper-pagination',
@@ -296,7 +316,9 @@ const projectwiper = new Swiper('.project__swiper', {
   navigation: {
     nextEl: '.project__swiper-button-next',
     prevEl: '.project__swiper-button-prev',
-  },
+  }
+
+
 
 });
 
