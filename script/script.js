@@ -120,8 +120,8 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
   },
   slideClass: 'gallery__swiper-slide',
   // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 3,
+  spaceBetween: 50,
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -129,24 +129,21 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
       slidesPerView: 3,
       spaceBetween: 50
     },
-    1024: {
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    },
+    769: {
       slidesPerView: 2,
       spaceBetween: 34
     },
-    // when window width is >= 640px
-    640: {
+    321: {
       slidesPerView: 2,
       spaceBetween: 34
-    },    // when window width is >= 480px
-    480: {
-      slidesPerView: 1,
-      spaceBetween: 10
     },
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10
+    120:{
+      slidesPerView: 1
     }
-
 
   }
 });
@@ -258,18 +255,24 @@ const swiperEvents = new Swiper('.events__swiper', {
       slidesPerView: 3,
       spaceBetween: 50
     },
-    1024: {
+    1025: {
       slidesPerView: 3,
-      spaceBetween: 27
+      spaceBetween: 50
     },
     // when window width is >= 640px
-    768: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 27
+    },    // when window width is >= 480px
+    480: {
       slidesPerView: 2,
       spaceBetween: 34
-    },    // when window width is >= 480px
-    320: {
-      slidesPerView: 1
+     
+    },
+    120: {
+      slidesPerView:1
     }
+
   }
 });
 
@@ -295,16 +298,20 @@ const projectwiper = new Swiper('.project__swiper', {
   slidesPerView: 3,
   spaceBetween: 50,
   breakpoints: {
-    1024: {
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    },
+    769: {
       slidesPerView: 2,
       spaceBetween: 50
     },
-    768: {
+    481: {
       slidesPerView: 2,
       spaceBetween: 34
     },
-    320: {
-      slidesPerView: 1
+    120: {
+      slidesPerView:1
     }
   },
   // If we need pagination

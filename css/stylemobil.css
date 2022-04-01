@@ -18,33 +18,46 @@
   }
 
   .about__description {
-    width: 666px;
+    width: 100%;
   }
 
   .gallery__content {
     display: inline-block;
+    width: 100%;
   }
 
   .choices {
+    width: 281px;
     margin: 0;
     margin-bottom: 76px;
   }
 
-  .gallery__swiper-slide {
-    width: 315px !important;
+  .hero__description {
+    width: 100%;
+
+  }
+
+  .hero__header {
+    transform: translateX(-17px);
+
+  }
+
+  .hero__text {
+    width: 100%;
+    transform: translateX(17px);
   }
 
   .card__picture {
-    width: 315px;
-    height: 330px;
+    width: 100%;
+    height: 418px;
   }
 
   .gallery__right {
+    width: 100%;
     padding: 18px 0 0 0;
   }
 
   .gallery__swiper-container {
-    width: 668px !important;
     height: 330px;
   }
 
@@ -69,34 +82,30 @@
   }
 
   .column {
-    max-height: 338px;
+    max-height: 319px;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-    -webkit-column-gap: 49px;
-    -moz-column-gap: 49px;
-    column-gap: 49px;
+    -webkit-column-gap: 6.4%;
+    -moz-column-gap: 6.4%;
+    column-gap: 6.4%;
   }
 
+
+
   #accordion {
+    min-width: 320px;
     margin-bottom: 32px;
   }
 
-  .card__picture {
-    width: 668px;
-    height: 419px;
-  }
 
-  .card__description {
-    width: 667px;
-  }
 
   .catalog {
     padding-bottom: 70px;
   }
 
   .events {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
   }
 
   .events__header {
@@ -104,19 +113,19 @@
   }
 
   .events__cover {
-    width: 315px;
     height: 200px;
   }
 
   .events__swiper {
 
-    width: 668px;
     min-height: 683px;
     /*transform: translateX(-3px);*/
   }
 
   .events__content {
-    width: 668px;
+    width: 100%;
+
+
   }
 
   .projects__text {
@@ -125,7 +134,7 @@
 
 
   .project__img {
-    width: 263px;
+    width: 100%;
     height: 98px;
   }
 
@@ -146,13 +155,17 @@
   }
 
   .contacts__name, .contacts__tel {
-    width: 324px !important;
+    width: 323px !important;
   }
 
+  .contacts__name {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
 
-  .maps__container {
-    width: 786px;
-    height: 700px;
+  .contacts__tel {
+    margin: 0;
+    margin-bottom: 20px;
   }
 
 
@@ -165,16 +178,14 @@
   .contacts__form {
     position: relative;
     display: flex;
-    margin-bottom: 104px;
+    margin-bottom: 43px;
   }
 
   .contacts__submit {
-    position: absolute;
+    position: relative;
     padding: 11px 24px;
     width: 318px;
-    top: 62px;
     height: 70px;
-    left: 0;
     font-size: 18px;
     line-height: 16px;
     text-align: center;
@@ -194,7 +205,7 @@
 
 
   .footer__logo {
-    transform: translateX(-99px) translateY(4px);
+    transform: none;
   }
 
   .social__item>svg {
@@ -203,7 +214,7 @@
   }
 
   .social__list {
-    transform: translateX(110px) translateY(-3px);
+    transform: none;
   }
 
   .social__item:not(:last-child) {
@@ -216,7 +227,8 @@
   }
 
   .card__description {
-    width: 672px;
+    width: 100%;
+    max-width: 100%;
     transform: translateX(1px);
   }
 
@@ -230,6 +242,7 @@
 
   .events__what {
     padding-left: 36px;
+    padding-bottom: 70px;
   }
 
   .events__more {
@@ -247,9 +260,8 @@
 
   .events__swiper-pagination {
     display: flex;
-    padding-top: 23px;
-    padding-left: 279px;
-
+    padding-top: 30px;
+    margin: 0 auto;
   }
 
   .swiper-pagination-bullet {
@@ -275,29 +287,26 @@
 
   .project__text {
     max-width: 657px;
-    margin-bottom: 28px;
+    margin-bottom: -4px;
   }
 
   .project {
-    padding-bottom: 65px;
+    padding-bottom: 80px;
+  }
+
+
+
+  .project__swiper {
+    padding: 0;
+    padding-top: 17px;
+    width: 100%;
+    height: 123px;
   }
 
   .project__company {
-    padding-left: 54px;
-  }
-
-  .project__swiper {
-    padding: 17px 0px;
-  }
-
-  .project__img {
-    width: 264px;
-    height: 106px;
-  }
-
-
-  .project__swiper {
-    width: 562px;
+    width: 84%;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .contacts {
@@ -313,9 +322,19 @@
     margin-bottom: 34px;
   }
 
-  .footer {
-    padding: 43px 149px 44px 150px;
+  .contacts__block {
+    height: 62px;
+  }
 
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 40px 40px 50px;
+
+  }
+
+  .footer__linklogo {
+    padding-top: 10px;
   }
 }
 
@@ -324,6 +343,19 @@
     max-width: 320px;
     padding: 0 15px;
     margin: 0 auto
+  }
+
+  .logo__pic {
+    width: 97px;
+    height: 22px;
+  }
+
+  .hero__description {
+    margin-bottom: 40px;
+  }
+
+  .hero__header {
+    transform: none;
   }
 
   .swiper-container {
@@ -408,12 +440,9 @@
     padding: 62px 0 7px 0;
   }
 
-  .hero__text {
-    transform: translateX(17px);
-  }
 
   .hero__description {
-    width: 265px;
+    width: 100%;
     text-align: center;
     font-size: 12px;
     line-height: 16px;
@@ -429,9 +458,6 @@
     transform: translateX(28px);
   }
 
-  .hero__description {
-    margin-bottom: 40px;
-  }
 
   .about__header {
     font-size: 28px;
@@ -581,7 +607,7 @@
   }
 
   .card__picture {
-    width: 290px;
+
     height: 181px;
     margin-bottom: 13px;
   }
@@ -590,9 +616,7 @@
     margin-bottom: 15px;
   }
 
-  .card__description {
-    width: 293px;
-  }
+
 
   .events__header {
     font-size: 28px;
@@ -600,12 +624,11 @@
   }
 
   .events__cover {
-    width: 288px;
     height: 200px;
   }
 
   .events__swiper {
-    width: 320px;
+
     margin-bottom: 20px;
   }
 
@@ -615,12 +638,13 @@
   }
 
   .events__where {
-    padding-right: 32px;
+    padding-right: 17px;
     margin-bottom: 6px;
   }
 
   .events__desc {
     padding-top: 10px;
+    padding-right: 0;
   }
 
   .events__subheader {
@@ -632,6 +656,7 @@
 
   .events__what {
     padding-left: 22px;
+    padding-bottom: 98px;
   }
 
   .events__more {
@@ -654,7 +679,7 @@
   }
 
   .events {
-    padding-bottom: 75px;
+    padding-bottom: 45px;
   }
 
   .project {
@@ -695,16 +720,14 @@
   .project__swiper {
     width: 100%;
     height: 77px;
-    padding: 11px 47px;
+    padding: 11px 0 0 0;
+    margin: 0 auto;
 
   }
 
-  .project__company {
-    padding: 0;
-  }
+
 
   .project__swiper-slide {
-    width: 195px !important;
     height: 65px;
   }
 
@@ -836,7 +859,7 @@
   }
 
   .maps__container {
-    width: 320px;
+    width: 100%;
     height: 320px;
   }
 

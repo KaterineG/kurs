@@ -96,7 +96,7 @@
   }
 
   .swiper-container {
-    height: 768px;
+    height: 100%;
   }
 
   .about {
@@ -104,41 +104,49 @@
   }
 
   .about__description {
-    width: 925px;
+    width: 100%;
   }
 
-  .choices {
-    width: 280px;
-  }
 
   .gallery__swiper-container {
-    width: 594px;
+   
+    width: 100%;
     height: 315px;
     overflow: hidden;
   }
-
+  .gallery__swiper-page-container {
+    display: flex;
+    margin-bottom: 22px;
+    transform: translateX(-4px);
+}
   .gallery__option {
     bottom: 17px;
     left: -17px;
   }
-
+.gallery__right{
+  width: 70%;
+  padding: 17px 0 0 5%;
+}
+.gallery__left{
+  width: 30%;
+}
   /*
       .gallery__swiper-slide {
         width: 280px !important;
       }
 */
-  .card__picture {
-    width: 437px;
-    height: 274px;
-  }
 
   .card__description {
-    width: 440px;
+    max-width: 440px;
   }
 
   .catalog__sect {
-    padding-left: 47px;
-    transform: translateY(3px);
+    padding-left: 60px;
+
+  }
+
+  .catalog__card {
+    width: 100%;
   }
 
   .column {
@@ -162,7 +170,7 @@
 
   .events__swiper {
 
-    width: 924px;
+   
     min-height: 683px;
     /*transform: translateX(-3px);*/
   }
@@ -177,7 +185,6 @@
   }
 
   .events__cover {
-    width: 290px;
     height: 200px;
   }
 
@@ -222,33 +229,40 @@
   .events {
     padding-bottom: 120px;
   }
-
+  .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+  }
   .events__swiper-button-prev .projects__text {
     max-width: 925px;
   }
 
   .events__swiper-slide {
     width: 500px;
-    height: 100%;
     margin-right: 27px;
   }
-  .events__swiper-pagination{
-    display: block;
-    position: absolute;
-    left:calc(50% - 10px);
+
+  .events__swiper-pagination {
+    display: flex;
+    padding-top: 31px;
+    justify-content: center;
   }
+
   .events__content {
-    height: 683px;
+    height: 100%;
   }
-.swiper-pagination-bullet:not(:last-child){
-  margin-right: 15px;
-}
-.swiper-pagination-bullet-active{
-  background-color: #D1A9F0;
-}
+
+  .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #D1A9F0;
+  }
+
   .project__swiper {
     padding-top: 11px;
-    width: 818px;
+    width: 100%;
     height: 138px;
   }
 
@@ -259,10 +273,12 @@
 
   .project__swiper-button-prev {
     top: 59px;
+    left:-51px;
   }
 
   .project__swiper-button-next {
     top: 59px;
+    right: -52px;
   }
 
   .projects {
@@ -274,7 +290,7 @@
   }
 
   .project__company {
-    padding-left: 53px;
+    width: 88.9%;
     padding-top: 0;
   }
 
@@ -291,7 +307,7 @@
   }
 
   .contacts__tel {
-    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .contacts__submit {
@@ -300,6 +316,7 @@
 
   .contacts__form {
     margin-bottom: 42px;
+    flex-wrap: wrap;
   }
 
   .contacts__list {
@@ -319,17 +336,13 @@
   }
 
 
-  .maps__container {
-    width: 1024px;
-    height: 700px;
-  }
 
   .contacts {
     padding-bottom: 9px;
   }
 
   .footer {
-   padding: 46px 149px 44px 150px;
+    padding: 46px 149px 44px 150px;
   }
 
   .footer__logo {
