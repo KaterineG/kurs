@@ -133,9 +133,8 @@
   }
 
 
-  .project__img {
-    width: 100%;
-    height: 98px;
+  .project__swiper-slide {
+    height: 106px;
   }
 
   .project__swiper-button-prev {
@@ -586,6 +585,7 @@
 
   .accordion__list {
     padding-top: 20px;
+    
   }
 
   .ui-accordion .ui-accordion-content {
