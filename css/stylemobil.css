@@ -188,7 +188,6 @@
     font-size: 18px;
     line-height: 16px;
     text-align: center;
-    font-family: 'OpenSans';
     font-style: normal;
     font-weight: 700;
     /* identical to box height */
@@ -694,7 +693,6 @@
 
   .project__header {
     margin-bottom: 8px;
-    font-family: 'OpenSans';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -818,7 +816,6 @@
     position: absolute;
     top: 10px;
     left: 33px;
-    font-family: 'OpenSans';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;

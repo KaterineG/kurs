@@ -106,7 +106,7 @@
 
     .header__sign {
       padding: 10px 32px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 12px;
@@ -542,7 +542,7 @@
       width: 220px;
       padding: 9px 120px 12px 14px;
 
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
@@ -871,7 +871,7 @@
       background: var(--violet-effect-light);
       border-radius: 100px;
       border: 2px solid var(--violet-effect-light);
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -951,7 +951,7 @@
     button {
       /*кнопка*/
       border: none;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 48px;
@@ -1598,7 +1598,7 @@
       position: relative;
       padding: 0;
       list-style: none;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -1615,7 +1615,7 @@
       padding: 0;
       background-color: rgb(0, 0, 0, 0);
       line-height: 0;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -1737,7 +1737,7 @@
 
     .option__caption {
       height: 32px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -1950,7 +1950,7 @@
       padding-top: 46px;
       padding-left: 0;
       padding-bottom: 45px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2170,7 +2170,7 @@
       z-index: 1;
       margin: 0;
       padding: 7px 6px 9px 5px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -2237,7 +2237,7 @@
     .ui-widget select,
     .ui-widget textarea,
     .ui-widget button {
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -2303,7 +2303,7 @@
     }
 
     .accordion__blocktitle {
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2334,7 +2334,7 @@
       width: 275px;
       margin-bottom: 5px;
       transform: translateX(6px);
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2347,7 +2347,7 @@
     .card__blocklink2 {
       width: max-content;
       padding: 0 11px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -2503,7 +2503,7 @@
 
     .events__more, .project__link {
 
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2578,7 +2578,7 @@
       margin: 0 auto;
       align-items: center;
       padding: 16px 33px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 18px;
@@ -2772,7 +2772,7 @@
     }
 
     .project__header {
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 48px;
@@ -2787,7 +2787,7 @@
       padding-top: 4px;
       margin: 0;
       margin-bottom: 20px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2869,7 +2869,7 @@
     /* end project__text*/
 
     .project__partners {
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2879,7 +2879,7 @@
 
     .project__link>span {
       padding: 2px 6px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -3073,7 +3073,7 @@
 
     .contacts__org {
       margin: 0;
-      Font-family: 'OpenSans';
+      Font-family: 'OpenSans',sans-serif;
       font-weight: 600;
       Font-size: 24px;
       color: #333333;
@@ -3082,7 +3082,7 @@
 
     .contacts__addr {
       margin: 0;
-      Font-family: 'OpenSans';
+      Font-family: 'OpenSans',sans-serif;
       font-weight: 400;
       Font-size: 16px;
       color: #333333;
@@ -3148,7 +3148,7 @@
       position: absolute;
       top: -17px;
       left: 21px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -3158,7 +3158,7 @@
     }
 
     .contacts__tel::placeholder, .contacts__name::placeholder {
-      Font-family: 'OpenSans';
+      Font-family: 'OpenSans',sans-serif;
       font-weight: 400;
       Font-size: 16px;
       color: #999;
@@ -3175,7 +3175,7 @@
       border-radius: 100px;
       letter-spacing: 0;
       background-color: rgb(0, 0, 0, 0);
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-weight: 700;
       font-size: 18px;
       color: #9D5CD0;
@@ -3226,7 +3226,7 @@
     .contacts__note {
       margin: 0;
       margin-bottom: 18px;
-      font-family: 'OpenSans';
+      font-family: 'OpenSans',sans-serif;
       font-weight: 600;
       font-size: 24px;
       color: #333;
