@@ -2250,11 +2250,11 @@
 
 
     .accordion__list {
-      max-height: 319px;
       display:flex;
+      max-height: 319px;
       padding: 0;
       padding-top: 24px;
-      width:100%;
+      padding-right: 118px;
       margin: 0;
       list-style: none;
       flex-direction: column;

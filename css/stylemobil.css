@@ -80,7 +80,7 @@
     padding-left: 1px;
     transform: translateY(-16px);
   }
-
+/*
   .column {
     max-height: 319px;
     -webkit-column-count: 3;
@@ -91,7 +91,7 @@
     column-gap: 6.4%;
   }
 
-
+*/
 
   #accordion {
     min-width: 320px;
@@ -154,7 +154,7 @@
   }
 
   .contacts__name, .contacts__tel {
-    width: 323px !important;
+    max-width: 323px !important;
   }
 
   .contacts__name {
@@ -293,7 +293,9 @@
     padding-bottom: 80px;
   }
 
-
+.project__partners{
+  margin-bottom:54px;
+}
 
   .project__swiper {
     padding: 0;
