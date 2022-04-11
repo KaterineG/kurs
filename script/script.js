@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }
     const screenWidth = window.screen.width;
-console.log(screenWidth);
+
     if(screenWidth <= 320){
       document.querySelector('.contacts__submit').textContent = "Заказать";
     }

@@ -303,7 +303,7 @@
     }
 
     .header__button:active {
-      color: #7943A4 !important;
+      color: #7943A4 ;
       background-color: rgb(0, 0, 0, 0);
       border-color: rgb(0, 0, 0, 0);
       outline: none;
@@ -347,11 +347,11 @@
     }
 
     [data-simplebar] {
-      position: absolute !important;
+      position: absolute ;
     }
 
     .simplebar-wrapper {
-      width: 300px !important;
+      width: 300px ;
     }
 
     .header__logo {
@@ -435,20 +435,20 @@
     }
 
     .simplebar-scrollbar {
-      right: 19px !important;
+      right: 19px ;
       width: 2px;
       background-color: white;
     }
 
     .simplebar-vertical {
-      width: 2px !important;
+      width: 2px ;
       top: 40px;
     }
 
     .simplebar-track {
-      right: 19px !important;
-      top: 40px !important;
-      bottom: 40px !important;
+      right: 19px ;
+      top: 40px ;
+      bottom: 40px ;
       width: 2px;
       background-color: black;
     }
@@ -703,7 +703,7 @@
       border: none;
       outline: none;
       border-bottom: 2px solid #fff;
-      color: #fff !important;
+      color: #fff ;
       font-size: 19px;
       letter-spacing: -0.5px;
       transition: border-color .2s ease;
@@ -1054,7 +1054,7 @@
     .choices__inner {
       padding: 0;
       min-height: 40px;
-      border-radius: 6px !important;
+      border-radius: 6px ;
       border: 1px solid #fff;
       background-color: rgb(0, 0, 0, 0);
       transition: background-color 0.2s ease;
@@ -1171,7 +1171,7 @@
     }
 
     .is-open {
-      border-radius: 6px !important;
+      border-radius: 6px ;
     }
 
     .choices__list--single {
@@ -2007,7 +2007,7 @@
     }
 
     .accordion__block.accordionload {
-      border-color: #7943A4 !important;
+      border-color: #7943A4 ;
     }
 
     .accordion__block {
@@ -2099,8 +2099,7 @@
 
     .accordion__block:focus {
       stroke: #9D5CD0;
-      outline: red;
-      background-color: red;
+      
     }
 
     .accordion__block:focus-visible .accordion__btn-fill {
@@ -2357,14 +2356,14 @@
       text-decoration: none;
       cursor: pointer;
       border-bottom: 1px solid rgb(0, 0, 0, 0);
-      color: var(--violet-effect-light) !important;
+      color: var(--violet-effect-light) ;
       transition-duration: 0.2s;
       transition-property: color, background-color, border-color;
       transition-timing-function: ease;
     }
 
     .card__blocklink2 {
-      padding: 0 5px !important;
+      padding: 0 5px ;
     }
 
     .card__blocklink::after {

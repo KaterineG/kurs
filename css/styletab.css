@@ -135,7 +135,7 @@
 }
   /*
       .gallery__swiper-slide {
-        width: 280px !important;
+        width: 280px ;
       }
 */
 
@@ -351,8 +351,8 @@
   }
 
   .social__link>svg {
-    width: 60px !important;
-    height: 60px !important;
+    width: 60px ;
+    height: 60px ;
   }
 
   .social__list {

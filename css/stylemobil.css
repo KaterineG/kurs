@@ -154,7 +154,7 @@
   }
 
   .contacts__name, .contacts__tel {
-    max-width: 323px !important;
+    max-width: 323px ;
   }
 
   .contacts__name {
@@ -208,8 +208,8 @@
   }
 
   .social__item>svg {
-    width: 60px !important;
-    height: 60px !important;
+    width: 60px ;
+    height: 60px ;
   }
 
   .social__list {
@@ -515,11 +515,11 @@
   }
 
   .gallery__swiper-slide {
-    width: 290px !important;
+    width: 290px ;
   }
 
   .gallery__swiper-container {
-    width: 320px !important;
+    width: 320px ;
   }
 
   .magnifier {
@@ -572,7 +572,7 @@
   }
 
   .rotator {
-    top: 6px !important;
+    top: 6px ;
   }
 
   .column {
@@ -773,7 +773,7 @@
   }
 
   .contacts__name, .contacts__tel {
-    width: 290px !important;
+    width: 290px ;
     height: 41px;
   }
 
@@ -873,8 +873,8 @@
   }
 
   .social__link>svg {
-    width: 50px !important;
-    height: 50px !important;
+    width: 50px ;
+    height: 50px ;
   }
 
   .social__list {
