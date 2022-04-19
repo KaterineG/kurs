@@ -1994,7 +1994,7 @@
       transition: border-color 0.3s ease;
       cursor: pointer;
       outline: none;
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
 
     .accordionload>.accordion__button>svg>.accordion__btn-fill {
@@ -2242,11 +2242,6 @@
       font-weight: 500;
       font-size: 16px;
     }
-
-
-
-   
-
 
     .accordion__list {
       display:flex;
