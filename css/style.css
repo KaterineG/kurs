@@ -106,7 +106,7 @@
 
     .header__sign {
       padding: 10px 32px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 12px;
@@ -189,11 +189,9 @@
 
     .nav__list {
       display: flex;
-      width: 76.3%;
+      width: 77%;
       margin: 0;
       padding: 0;
-      padding-bottom: 3px;
-      transform: translateX(7px) translateY(-7px);
       justify-content: space-between;
     }
 
@@ -203,7 +201,6 @@
 
     .header__nav {
       width: 64%;
-      margin-right: auto;
     }
 
     .logo__pic {
@@ -222,8 +219,9 @@
       border: none;
       color: rgba(255, 255, 255, 0.85);
       background: rgba(0, 0, 0, 0);
+      letter-spacing: 0;
+      transform: translate(6px, 2px);
       transition: color 0.2s ease;
-      transform: translateX(1px) translateY(-8px);
       cursor: pointer;
     }
 
@@ -303,7 +301,7 @@
     }
 
     .header__button:active {
-      color: #7943A4 ;
+      color: #7943A4;
       background-color: rgb(0, 0, 0, 0);
       border-color: rgb(0, 0, 0, 0);
       outline: none;
@@ -347,23 +345,32 @@
     }
 
     [data-simplebar] {
-      position: absolute ;
+      position: absolute;
     }
 
     .simplebar-wrapper {
-      width: 300px ;
+      width: 300px;
     }
 
     .header__logo {
-      padding-top: 2px;
-      /* transform: translateX(-3px);*/
-      margin-right: auto;
+      margin:0;
+      padding:0;
+      width: 173px;
+      height: 40px;
+      background: url('../img/logo/logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: center;
+      background-position-y: center;
+
     }
 
     .header__content {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       max-width: 100%;
+      padding: 30px 0;
     }
 
     .header__links {
@@ -379,8 +386,6 @@
 
     .header__top {
       width: 100%;
-      padding-top: 28px;
-      padding-bottom: 13px;
       background-color: black;
       background-origin: border-box;
     }
@@ -435,20 +440,20 @@
     }
 
     .simplebar-scrollbar {
-      right: 19px ;
+      right: 19px;
       width: 2px;
       background-color: white;
     }
 
     .simplebar-vertical {
-      width: 2px ;
+      width: 2px;
       top: 40px;
     }
 
     .simplebar-track {
-      right: 19px ;
-      top: 40px ;
-      bottom: 40px ;
+      right: 19px;
+      top: 40px;
+      bottom: 40px;
       width: 2px;
       background-color: black;
     }
@@ -542,7 +547,7 @@
       width: 220px;
       padding: 9px 120px 12px 14px;
 
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
@@ -663,7 +668,8 @@
 
 
     .nav__item {
-      padding: 0 7px;
+      margin: 0;
+      padding: 0 8px;
       border: 2px solid rgba(0, 0, 0, 0);
       transition: border-color 0.2s ease;
     }
@@ -703,7 +709,7 @@
       border: none;
       outline: none;
       border-bottom: 2px solid #fff;
-      color: #fff ;
+      color: #fff;
       font-size: 19px;
       letter-spacing: -0.5px;
       transition: border-color .2s ease;
@@ -871,7 +877,7 @@
       background: var(--violet-effect-light);
       border-radius: 100px;
       border: 2px solid var(--violet-effect-light);
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -951,7 +957,7 @@
     button {
       /*кнопка*/
       border: none;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 48px;
@@ -996,11 +1002,7 @@
       padding-bottom: 80px;
     }
 
-    .gallery__left {
-      padding-right: 76px;
-      width: 30%;
-      position: relative;
-    }
+
 
     .gallery__header {
       margin-bottom: 16px;
@@ -1054,7 +1056,7 @@
     .choices__inner {
       padding: 0;
       min-height: 40px;
-      border-radius: 6px ;
+      border-radius: 6px;
       border: 1px solid #fff;
       background-color: rgb(0, 0, 0, 0);
       transition: background-color 0.2s ease;
@@ -1171,7 +1173,7 @@
     }
 
     .is-open {
-      border-radius: 6px ;
+      border-radius: 6px;
     }
 
     .choices__list--single {
@@ -1229,12 +1231,17 @@
     }
 
     .gallery__left {
-      width: 30%;
+      width: 25%;
+      position: relative;
     }
 
     .gallery__right {
-      width: 70%;
+      position: relative;
+      width: 75%;
+      padding-left:50px;
+      padding-top:18px;
     }
+  
 
     /*состояния ссылок в тексте*/
 
@@ -1340,7 +1347,7 @@
     .gallery__swiper-page-container {
       display: flex;
       margin-bottom: 22px;
-      transform: translateX(-35px);
+      transform: translateX(-8px);
     }
 
     .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -1586,11 +1593,7 @@
     /**/
 
 
-    .gallery__right {
-      padding: 18px 0 0 0;
-      position: relative;
-      width: 70%;
-    }
+
 
     .option__item {
 
@@ -1598,7 +1601,7 @@
       position: relative;
       padding: 0;
       list-style: none;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -1615,7 +1618,7 @@
       padding: 0;
       background-color: rgb(0, 0, 0, 0);
       line-height: 0;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -1737,7 +1740,7 @@
 
     .option__caption {
       height: 32px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -1937,7 +1940,7 @@
     }
 
     .catalog__card {
-      width: 89%;
+      width: 88%;
     }
 
     /*accordion*/
@@ -1950,7 +1953,7 @@
       padding-top: 46px;
       padding-left: 0;
       padding-bottom: 45px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -1983,7 +1986,6 @@
     .catalog__sect {
       width: 100%;
       padding-left: 66px;
-      transform: translateY(4px);
     }
 
     path {
@@ -2007,7 +2009,7 @@
     }
 
     .accordion__block.accordionload {
-      border-color: #7943A4 ;
+      border-color: #7943A4;
     }
 
     .accordion__block {
@@ -2099,7 +2101,7 @@
 
     .accordion__block:focus {
       stroke: #9D5CD0;
-      
+
     }
 
     .accordion__block:focus-visible .accordion__btn-fill {
@@ -2127,8 +2129,8 @@
     .accordion__button {
       height: 53px;
       position: absolute;
-      right: -2px;
-      top: 32px;
+      right: 0;
+      top: 35px;
       padding: 0;
       background: none;
       cursor: pointer;
@@ -2150,6 +2152,9 @@
       -ms-transform: rotate(-180deg);
       transform: rotate(-180deg);
     }
+    .accordion__button.rotator{
+      top: 30px;
+    }
 
     .ui-corner-all,
     .ui-corner-top,
@@ -2170,7 +2175,7 @@
       z-index: 1;
       margin: 0;
       padding: 7px 6px 9px 5px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -2237,17 +2242,18 @@
     .ui-widget select,
     .ui-widget textarea,
     .ui-widget button {
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
     }
 
     .accordion__list {
-      display:flex;
+      display: flex;
+      width: 100%;
       max-height: 319px;
       padding: 0;
-      padding-top: 24px;
+      padding-top: 29px;
       padding-right: 118px;
       margin: 0;
       list-style: none;
@@ -2255,7 +2261,8 @@
       flex-wrap: wrap;
       align-content: space-between;
     }
-/*
+
+    /*
     .column {
       max-height: 319px;
       columns: auto auto;
@@ -2298,7 +2305,7 @@
     }
 
     .accordion__blocktitle {
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2329,7 +2336,7 @@
       width: 275px;
       margin-bottom: 5px;
       transform: translateX(6px);
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2342,7 +2349,7 @@
     .card__blocklink2 {
       width: max-content;
       padding: 0 11px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -2351,14 +2358,14 @@
       text-decoration: none;
       cursor: pointer;
       border-bottom: 1px solid rgb(0, 0, 0, 0);
-      color: var(--violet-effect-light) ;
+      color: var(--violet-effect-light);
       transition-duration: 0.2s;
       transition-property: color, background-color, border-color;
       transition-timing-function: ease;
     }
 
     .card__blocklink2 {
-      padding: 0 5px ;
+      padding: 0 5px;
     }
 
     .card__blocklink::after {
@@ -2412,7 +2419,7 @@
     }
 
     .events__header {
-      margin-bottom: 17px;
+      margin-bottom: 15px;
       font-style: normal;
       font-weight: normal;
       font-size: 48px;
@@ -2498,7 +2505,7 @@
 
     .events__more, .project__link {
 
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2573,7 +2580,7 @@
       margin: 0 auto;
       align-items: center;
       padding: 16px 33px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 18px;
@@ -2767,7 +2774,7 @@
     }
 
     .project__header {
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 48px;
@@ -2782,7 +2789,7 @@
       padding-top: 4px;
       margin: 0;
       margin-bottom: 20px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2802,6 +2809,16 @@
       background: none;
       border: none;
       line-height: 0;
+      transform: translate(-3px, 4px);
+    }
+
+    #project__tooltip2{
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    #project__tooltip3{
+      padding-left: 2px;
+      padding-right: 2px;
     }
 
     .project__btntooltip {
@@ -2864,7 +2881,7 @@
     /* end project__text*/
 
     .project__partners {
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2874,7 +2891,7 @@
 
     .project__link>span {
       padding: 2px 6px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -2925,7 +2942,7 @@
     .project__company {
       position: relative;
       height: 150px;
-      width: 90%;
+      width: calc(90% + 10px);
       margin: 0 auto;
       padding-top: 10px;
     }
@@ -2944,8 +2961,8 @@
 
     .project__swiper-button-next {
       position: absolute;
-      right: -85px;
-      top: 72px;
+      right: -77px;
+      top: 70px;
       width: 32px;
       height: 33px;
       z-index: 2;
@@ -2955,8 +2972,8 @@
 
     .project__swiper-button-prev {
       position: absolute;
-      left: -80px;
-      top: 72px;
+      left: -75px;
+      top: 70px;
       width: 32px;
       height: 33px;
       z-index: 2;
@@ -3004,7 +3021,7 @@
       stroke: #9D5CD0;
     }
 
-  
+
 
     .project__swiper-slide {
       height: 150px;
@@ -3051,7 +3068,7 @@
 
     .contacts {
       width: 100%;
-      padding-top: 48px;
+      padding-top: 59px;
       padding-bottom: 13px;
       border: 1px solid #cacaca;
     }
@@ -3068,7 +3085,7 @@
 
     .contacts__org {
       margin: 0;
-      Font-family: 'OpenSans',sans-serif;
+      Font-family: 'OpenSans', sans-serif;
       font-weight: 600;
       Font-size: 24px;
       color: #333333;
@@ -3077,7 +3094,7 @@
 
     .contacts__addr {
       margin: 0;
-      Font-family: 'OpenSans',sans-serif;
+      Font-family: 'OpenSans', sans-serif;
       font-weight: 400;
       Font-size: 16px;
       color: #333333;
@@ -3143,7 +3160,7 @@
       position: absolute;
       top: -17px;
       left: 21px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -3153,7 +3170,7 @@
     }
 
     .contacts__tel::placeholder, .contacts__name::placeholder {
-      Font-family: 'OpenSans',sans-serif;
+      Font-family: 'OpenSans', sans-serif;
       font-weight: 400;
       Font-size: 16px;
       color: #999;
@@ -3170,7 +3187,7 @@
       border-radius: 100px;
       letter-spacing: 0;
       background-color: rgb(0, 0, 0, 0);
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-weight: 700;
       font-size: 18px;
       color: #9D5CD0;
@@ -3221,7 +3238,7 @@
     .contacts__note {
       margin: 0;
       margin-bottom: 18px;
-      font-family: 'OpenSans',sans-serif;
+      font-family: 'OpenSans', sans-serif;
       font-weight: 600;
       font-size: 24px;
       color: #333;
@@ -3234,7 +3251,7 @@
     .contacts__list {
       display: flex;
       margin: 0;
-      transform: translateX(-39px) translateY(-11px);
+      transform: translateX(-38px) translateY(-14px);
     }
 
     .contacts__oneclick {

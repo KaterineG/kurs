@@ -1,3 +1,19 @@
+
+@media (max-width: 1240px) {
+  .container {
+    max-width: 1240px;
+    padding: 0 50px;
+    margin: 0 auto
+  }
+  .accordion__list{
+    max-height: 411px;
+    width:103%;
+    padding-right: 0 ;
+    padding-top:27px;
+    transform:translateX(-6px);
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -18,7 +34,6 @@
     display: flex;
     width: 36px;
     height: 30px;
-    transform: translateX(-6px);
     background-image: url('../img/Burger.png');
   }
 
@@ -29,18 +44,13 @@
 
   .header__search {
     display: flex;
+    padding: 0;
+    transform: translateY(4px);
     background-color: rgb(0, 0, 0, 0);
   }
 
   .header__button {
     display: none;
-  }
-
-  .header__top {
-    padding-left: 6px;
-    padding-top: 26px;
-    padding-right: 28px;
-    padding-bottom: 25px;
   }
 
   .logo__pic {
@@ -50,12 +60,10 @@
 
   .header__logo {
     margin: 0;
-    padding-left: 28px;
+    width: 188px;
+    height: 44px;
   }
 
-  .header__search {
-    transform: translateY(4px) translateX(35px);
-  }
 
   .header__bottom {
     display: none;
@@ -63,9 +71,11 @@
 
   .header__content {
     justify-content: space-between;
+    padding: 28px 0;
   }
-  .hero{
-    padding:200px 0 116px 0;
+
+  .hero {
+    padding: 200px 0 116px 0;
   }
 
   .hero__slider {
@@ -112,26 +122,33 @@
 
 
   .gallery__swiper-container {
-   
+
     width: 100%;
     height: 315px;
     overflow: hidden;
   }
+
   .gallery__swiper-page-container {
     display: flex;
     margin-bottom: 22px;
     transform: translateX(-4px);
-}
+  }
+
   .gallery__option {
     bottom: 17px;
     left: -17px;
   }
-.gallery__right{
-  width: 70%;
-  padding: 17px 0 0 5%;
-}
-.gallery__left{
-  width: 30%;
+
+  .gallery__right {
+    width: 70%;
+    padding: 17px 0 0 5%;
+  }
+
+  .gallery__left {
+    width: 30%;
+  }
+.gallery{
+  padding-bottom:82px;
 }
   /*
       .gallery__swiper-slide {
@@ -140,18 +157,22 @@
 */
 
   .card__description {
-    max-width: 440px;
+   letter-spacing: 0;
+   width: 98%;
   }
 
   .catalog__sect {
-    padding-left: 60px;
+    padding-left: 35px;
 
   }
 
   .catalog__card {
     width: 100%;
   }
-/*
+.card__picture{
+  width: 97%;
+}
+  /*
   .column {
     max-height: 439px;
     -webkit-column-count: 2;
@@ -162,18 +183,34 @@
     column-gap: 56px;
   }
 */
+.ui-accordion .ui-accordion-content{
+  transform:none;
+  padding-bottom:26px;
+}
+.swiper-pagination-fraction{
+  padding-top:14px;
+}
   #accordion {
     min-width: 437px;
+    transform: translateY(2px);
   }
 
   .accordion__button {
     right: 0px;
     top: 31px;
   }
-
+  .accordion__block{
+    padding-left: 25px;
+  }
+  .accordion__btn{
+    line-height: 99%;
+  }
+.catalog__content{
+  justify-content: space-between;
+}
   .events__swiper {
 
-   
+
     min-height: 683px;
     /*transform: translateX(-3px);*/
   }
@@ -215,7 +252,7 @@
   .events__what {
     padding-left: 33px;
     padding-right: 20px;
-    padding-bottom: 102px;
+    padding-bottom: 71px;
     padding-top: 0;
     max-width: 290px;
     letter-spacing: -0.1px;
@@ -233,10 +270,12 @@
   .events {
     padding-bottom: 78px;
   }
-  .swiper-pagination-bullet{
+
+  .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
   }
+
   .events__swiper-button-prev .projects__text {
     max-width: 925px;
   }
@@ -268,43 +307,48 @@
     width: 100%;
     height: 128px;
   }
+
   .project__swiper-slide {
-   height: 128px;
+    height: 128px;
   }
 
 
   .project__swiper-button-prev {
-    top: 59px;
-    left:-51px;
+    top: 49px;
+    left: -51px;
   }
 
   .project__swiper-button-next {
-    top: 59px;
+    top: 49px;
     right: -52px;
   }
 
   .project {
-    padding-bottom: 61px;
+    padding-bottom: 59px;
   }
 
-  .project__partners{
-    margin-bottom:23px;
+  .project__partners {
+    margin-bottom: 23px;
   }
+
   .project__company {
     width: 88.9%;
     padding-top: 0;
   }
-
+.project__text{
+  line-height: 32.2px;
+}
   .contacts__content {
     display: inline-block;
   }
 
   .contacts__address {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
+    
   }
 
   .contacts__addr {
-    transform: translateY(1px);
+    transform:none;
   }
 
   .contacts__tel {
@@ -321,7 +365,7 @@
   }
 
   .contacts__list {
-    transform: translateX(-41px) translateY(-12px);
+    transform: translateX(-41px) translateY(-14px);
   }
 
   .callback__form {
@@ -340,10 +384,11 @@
 
   .contacts {
     padding-bottom: 9px;
+    padding-top: 48px;
   }
 
   .footer {
-    padding: 46px 149px 44px 150px;
+    padding: 44px 149px 44px 150px;
   }
 
   .footer__logo {
@@ -351,8 +396,8 @@
   }
 
   .social__link>svg {
-    width: 60px ;
-    height: 60px ;
+    width: 60px;
+    height: 60px;
   }
 
   .social__list {
