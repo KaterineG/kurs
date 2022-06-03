@@ -179,7 +179,7 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
       ab.classList.remove('accordionload');
     });
 
-    head.classList.add('accordion__block-open');
+    head.classList.toggle('accordion__block-open');
 
   })
   //установка поворота стрелочки
@@ -194,7 +194,7 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
       document.querySelectorAll('.accordion__button').forEach(function (activBtn) {
         activBtn.classList.add('rotator'); //снимаем актив у всех
       })
-      button.classList.remove('rotator'); //добавляем актив к текущему выбору
+      button.classList.toggle('rotator'); //добавляем актив к текущему выбору
       //////добавляем открытый класс
 
 
@@ -217,14 +217,19 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
 /*accordion */
 
 $(function () {
-  $("#accordion").accordion({ heightStyle: "content" });
+  $("#accordion").accordion({ heightStyle: "content",
+  collapsible: true });
 });
 /*поворот стрелочки аккордеона клик на хедере */
 
+/*
+$( function() {
+  $( "#accordion" ).accordion({
+    collapsible: true
+  });
+} );
 
-
-
-
+*/
 
 document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
   button.addEventListener('click', function (e) {
@@ -279,11 +284,11 @@ const swiperEvents = new Swiper('.events__swiper', {
 /*красим точку в выборе */
 
 function addcheck(elem) {
-  document.querySelectorAll('.option__item').forEach(function (el) {
-    el.classList.remove('optionchecked');
+ /* document.querySelectorAll('.option__item').forEach(function (el) {
+    el.classList.add('optionchecked');
     el.classList.remove('defaultchecked');
-  });
-  elem.currentTarget.classList.add('optionchecked');
+  });*/
+  elem.currentTarget.classList.toggle('optionchecked');
 }
 document.querySelectorAll('.option__item').forEach(function (option) {
   option.addEventListener('click', function (el) {
@@ -383,6 +388,6 @@ document.addEventListener('keyup', function (event) {
       e.classList.remove('optionchecked');
 
     });
-    event.target.parentNode.classList.add('optionchecked');
+    event.target.parentNode.classList.toggle('optionchecked');
   }
 });

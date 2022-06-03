@@ -352,6 +352,7 @@
       width: 300px;
     }
 
+
     .header__logo {
       margin:0;
       padding:0;
@@ -1978,6 +1979,8 @@
       color: white;
       outline: none;
     }
+    
+
 
     .ui-icon {
       display: none;
@@ -2019,13 +2022,12 @@
 
     /*******************************/
     .accordion__block-open {
-
-      border-bottom: 1px solid #cacaca;
+      border-top: 1px solid #7943A4;
+      border-bottom: 1px solid #7943A4;
     }
 
     .accordion__block-open span {
-      background-color: #9D5CD0;
-      color: #fff;
+      color: #7943A4;
     }
 
     .accordion__block-open:hover span {
@@ -2035,7 +2037,7 @@
 
     .accordion__block-open .accordion__button .accordion__btn-fill {
       fill: #D1A9F0;
-      stroke: #D1A9F0;
+      stroke: #7943A4;
     }
 
     /*
@@ -2809,16 +2811,18 @@
       background: none;
       border: none;
       line-height: 0;
-      transform: translate(-3px, 4px);
+      transform: translate(-1px, 3px);
     }
 
     #project__tooltip2{
-      padding-left: 2px;
+      padding-left: 0px;
       padding-right: 2px;
+      transform: translate(-1px, 3px);
     }
     #project__tooltip3{
       padding-left: 2px;
       padding-right: 2px;
+      transform: translate(0, 3px);
     }
 
     .project__btntooltip {
