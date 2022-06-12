@@ -186,20 +186,12 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
   head.addEventListener('click', function (elem) {
     const num = elem.currentTarget.dataset.block;
     const button = document.querySelector(`[data-button="${num}"]`); //кнопка
-
-    if (button.classList.contains('active')) {
-      button.classList.remove('active');
-    } //если установлен поворот, то просто снимаем
-    else {
-      document.querySelectorAll('.accordion__button').forEach(function (activBtn) {
-        activBtn.classList.add('rotator'); //снимаем актив у всех
-      })
-      button.classList.toggle('rotator'); //добавляем актив к текущему выбору
-      //////добавляем открытый класс
-
-
-
-    }
+ 
+ 
+      button.classList.toggle('rotator');
+      button.classList.toggle('norotator');
+     //если установлен поворот, то просто снимаем
+    
     /*фокусируем на первой кнопке и ставим картинку*/
     let buttons = document.querySelectorAll('.accordion__btn');
     for (let buttonItem of buttons) {
