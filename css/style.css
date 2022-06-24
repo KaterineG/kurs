@@ -210,7 +210,7 @@ body {
 
 .nav__list {
 	display: flex;
-	width: 77%;
+	width: 77.3%;
 	margin: 0;
 	padding: 0;
 	justify-content: space-between;
@@ -221,7 +221,7 @@ body {
 }
 
 .header__nav {
-	width: 64%;
+	width: 63.6%;
 }
 
 .logo__pic {
@@ -294,8 +294,8 @@ body {
 	width: 86px;
 	height: 25px;
 	position: absolute;
-	top: -2px;
-	left: -11px;
+	top: 0px;
+	left: 0px;
 	border: 2px solid var(--alfa-color);
 	z-index: 0;
 	transition: border-color .2s ease;
@@ -447,24 +447,32 @@ body {
 	font-size: 14px;
 	z-index: 100;
 }
-
-.simplebar-scrollbar {
-	right: 19px;
-	width: 2px;
-	background-color: var(--white);
+.simplebar-track.simplebar-vertical {
+  background-color:var(--black);
+  width: 2px;
 }
 
-.simplebar-vertical {
-	width: 2px;
-	top: 40px;
+.simplebar-content-wrapper {
+  padding-right: 15px;
 }
 
-.simplebar-track {
-	right: 19px;
-	top: 40px;
-	bottom: 40px;
-	width: 2px;
-	background-color: var(--black);
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: var(--white);
+  border-radius: 0;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
 .dropdown__item:not(last-child) {
@@ -694,7 +702,7 @@ body {
 
 .header__menu {
 	display: flex;
-	width: 65.9%;
+	width: 65.7%;
 	justify-content: flex-start;
 }
 
@@ -716,7 +724,7 @@ body {
 	font-size: 19px;
 	letter-spacing: -0.5px;
 	transition: border-color .2s ease;
-	transform: translateX(4px);
+	transform: translate(3px, -1px);
 }
 
 .search__input::placeholder {
@@ -736,7 +744,7 @@ body {
 .search__icon {
 	margin: 0;
 	padding: 2px 3px 4px 6px;
-	border: 2px solid var(--alfa-white);
+	border: 2px solid var(--alfa-color);
 	outline: none;
 	font-size: 19px;
 	line-height: 19px;
@@ -1639,7 +1647,7 @@ button {
 	transition-duration: 0.2s;
 	transition-property: color, border-color;
 	transition-timing-function: ease;
-	line-height: 12px;
+	line-height: 10px;
 	text-align: center;
 	color: var(--alfa-color);
 }
@@ -1921,7 +1929,7 @@ button {
 }
 
 .card__description {
-	width: 100%;
+	width: 101%;
 	margin: 0;
 	font-style: normal;
 	font-weight: normal;
@@ -2118,7 +2126,7 @@ path {
 	height: 50px;
 	position: absolute;
 	right: 0;
-	top: 35px;
+	top: 34px;
 	padding: 0;
 	background: none;
 	cursor: pointer;
@@ -2126,39 +2134,36 @@ path {
 }
 
 .rotator {
-	transform: rotate(-180deg);
+	transform: rotate(0deg);
 	animation: animation-name .5s ease;
 }
 
 .norotator {
-	transform: rotate(0deg);
+	transform: rotate(-180deg);
 	animation: animation-back .5s ease;
 }
 
 
 @keyframes animation-name {
 	from {
-		transform: rotate(0deg);
+		transform: rotate(-180deg);
 	}
 
 	to {
-		transform: rotate(-180deg);
+		transform: rotate(0deg);
 	}
 }
 
 @keyframes animation-back {
 	from {
-		transform: rotate(-180deg);
+		transform: rotate(0deg);
 	}
 
 	to {
-		transform: rotate(0deg);
+		transform: rotate(-180deg);
 	}
 }
 
-.accordion__button {
-	top: 30px;
-}
 
 .ui-corner-all,
 .ui-corner-top,
@@ -2779,7 +2784,7 @@ path {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
-	line-height: 32px;
+	line-height: 1.99em;
 	color: var(--grey-333);
 
 }

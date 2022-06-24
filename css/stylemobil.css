@@ -77,7 +77,7 @@
 	}
 
 	.hero__header {
-
+    padding-left: 3px;
 		font-size: 9vw;
 		letter-spacing: 2px;
 
@@ -99,11 +99,12 @@
 	}
 
 	.gallery__swiper-container {
-		height: 330px;
+		height: 335px;
 	}
 
 	.gallery__swiper-page-container {
 		transform: translateX(-10px);
+    
 	}
 
 	.gallery__option {
