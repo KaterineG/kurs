@@ -383,3 +383,18 @@ document.addEventListener('keyup', function (event) {
     event.target.parentNode.classList.toggle('optionchecked');
   }
 });
+
+new tippy('#project__tooltip1', {
+  content: "Пример современных тенденций - современная методология разработки",
+  theme: 'tomato',
+});
+
+new tippy('#project__tooltip2', {
+  content: "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
+  theme: 'tomato',
+});
+
+new tippy('#project__tooltip3', {
+  content: "В стремлении повысить качество",
+  theme: 'tomato',
+});
