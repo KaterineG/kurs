@@ -137,12 +137,18 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
       slidesPerView: 2,
       spaceBetween: 34
     },
-    321: {
-      slidesPerView: 2,
+    700:{
+      slidesPerView:2,
       spaceBetween: 34
     },
-    120:{
+    480:{
       slidesPerView: 1
+    },
+    320:{
+      slidesPerView:1
+    },
+    0:{
+      slidesPerView:1
     }
 
   }
@@ -252,21 +258,19 @@ const swiperEvents = new Swiper('.events__swiper', {
       slidesPerView: 3,
       spaceBetween: 50
     },
-    1025: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 50
     },
     // when window width is >= 640px
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 27
-    },    // when window width is >= 480px
-    480: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 34
-     
+    },    // when window width is >= 480px
+    700: {
+      slidesPerView:1
     },
-    120: {
+    0: {
       slidesPerView:1
     }
 
@@ -295,17 +299,16 @@ const projectwiper = new Swiper('.project__swiper', {
   slidesPerView: 3,
   spaceBetween: 50,
   breakpoints: {
-    1025: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 50
     },
-    769: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 50
     },
     481: {
-      slidesPerView: 2,
-      spaceBetween: 34
+      slidesPerView:1
     },
     120: {
       slidesPerView:1
@@ -397,4 +400,14 @@ new tippy('#project__tooltip2', {
 new tippy('#project__tooltip3', {
   content: "В стремлении повысить качество",
   theme: 'tomato',
+});
+
+let opensearch = document.querySelector('.header__search').addEventListener('click', function (){
+  document.querySelector('.header__searchbar').classList.add('open');
+  document.querySelector('.header__search').classList.remove('open');
+});
+
+let closesearch = document.querySelector('.header__closebar').addEventListener('click', function (){
+  document.querySelector('.header__searchbar').classList.remove('open');
+  document.querySelector('.header__search').classList.add('open');
 });

@@ -12,17 +12,19 @@
   <link rel="stylesheet" type="text/CSS" href="script/Choices-master/public/assets/styles/choices.min.css" />
   <link rel="stylesheet" href="script/Choices-master/public/assets/styles/base.min.css" />
   <link rel="stylesheet" href="script/Choices-master/public/assets/styles/choices.min.css" />
-  <script src="script/Choices-master/public/assets/scripts/choices.min.js"></script>
   <link rel="shortcut icon" href="http://shortcut.com">
-  <script src="jquery-ui-1.12.1.custom/jquery-1.12.4.js"></script>
-  <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-  <script src="script/catalogFunction.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=098eb631-bdbf-4827-818a-ef3ba233f3af&lang=ru_RU"></script>
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/CSS" href="css/style.css">
   <link rel="stylesheet" type="text/CSS" href="css/styletab.css">
   <link rel="stylesheet" type="text/CSS" href="css/stylemobil.css">
+  <script src="script/jquery-3.6.0.min.js"></script>
+  <script src="scripe"
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="script/catalogFunction.js"></script>
+  <script src="script/Choices-master/public/assets/scripts/choices.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=098eb631-bdbf-4827-818a-ef3ba233f3af&lang=ru_RU"></script>
+
 </head>
 
 <body>
@@ -98,6 +100,12 @@
           </button>
           <button class="header__search" aria-label="кнопка поиска на сайте">
             <img src="img/search.png" alt=""></button>
+          <div class="header__searchbar opensearch">
+            <button class="header__search bar" aria-label="кнопка поиска на сайте">
+              <img src="img/search.png" alt=""></button>
+            <input class="header__inputbar" type="text" placeholder="">
+            <button class="header__closebar"></button>
+          </div>
         </div>
       </div>
     </div>
@@ -772,6 +780,7 @@
             <div class="contacts__block"> <input class="contacts__tel" type="text" placeholder="Телефон*"><span
                 class="contacts__err">Недопустимый формат</span></div>
             <button class="contacts__submit">Заказать&nbsp;обратный&nbsp;звонок</button>
+            <button class="contacts__submitmob">Заказать</button>
           </form>
           <div class="contacts__oneclick">
             <p class="contacts__note"> Связаться в один клик</p>
@@ -864,45 +873,7 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="script/script.js"></script>
-  <script>
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map('map', {
-        center: [55.7602, 37.6143],
-        zoom: 14.24
-      }, {
-        searchControlProvider: 'yandex#search'
-      }),
-
-
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemarkWithContent = new ymaps.Placemark([55.75995, 37.6153], {
-          hintContent: 'Собственный значок метки с контентом',
-          balloonContent: 'А эта — новогодняя',
-          iconContent: ''
-        }, {
-
-          iconLayout: 'default#imageWithContent',
-
-          iconImageHref: 'img/location.svg',
-
-          iconImageSize: [20, 20],
-
-          iconImageOffset: [-24, -24],
-
-          iconContentOffset: [15, 15],
-
-          iconContentLayout: MyIconContentLayout
-        });
-
-      myMap.geoObjects
-
-        .add(myPlacemarkWithContent);
-    });
-  </script>
- 
+  <script src="script/map.js"></script>
   <script src="simplebar/simplebar.js"></script>
 </body>
 
