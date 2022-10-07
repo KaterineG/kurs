@@ -19,7 +19,6 @@
   <link rel="stylesheet" type="text/CSS" href="css/styletab.css">
   <link rel="stylesheet" type="text/CSS" href="css/stylemobil.css">
   <script src="script/jquery-3.6.0.min.js"></script>
-  <script src="scripe"
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="script/catalogFunction.js"></script>
   <script src="script/Choices-master/public/assets/scripts/choices.min.js"></script>
@@ -30,43 +29,44 @@
 <body>
   <header class="header">
     <div class="header__top">
+      <div class="header__mobil">
+        <button class="header__close" aria-label="Закрыть меню"></button>
+        <nav class="header__nav-mobil nav list-reset">
+          <ul class="nav__list-mobil">
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
+            </li>
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
+            </li>
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
+            </li>
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#actions" aria-label="Пункт меню события">События</a>
+            </li>
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#project" aria-label="Пункт меню проекты">Проекты</a>
+            </li>
+            <li class="nav__item list-reset">
+              <a class="nav__link" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__sign" aria-label="Кнопка войти">
+          <svg width="14" height="13" viewbox="2 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
+              fill="white" />
+          </svg>
+          Войти
+        </button>
+      </div>
       <div class="container">
         <div class="header__content">
           <div class="header__burgercontent"><button class="header__burger" aria-label="Меню"></button>
           </div>
-          <div class="header__mobil">
-            <button class="header__close" aria-label="Закрыть меню"></button>
-            <nav class="header__nav-mobil nav list-reset">
-              <ul class="nav__list-mobil">
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
-                </li>
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
-                </li>
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
-                </li>
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#actions" aria-label="Пункт меню события">События</a>
-                </li>
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#project" aria-label="Пункт меню проекты">Проекты</a>
-                </li>
-                <li class="nav__item list-reset">
-                  <a class="nav__link" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <button class="header__sign" aria-label="Кнопка войти">
-              <svg width="14" height="13" viewbox="2 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
-                  fill="white" />
-              </svg>
-              Войти
-            </button>
-          </div>
+
           <a class="header__logo logo" href="#" aria-label="Логотип"></a>
           <nav class="header__nav nav list-reset">
             <ul class="nav__list">

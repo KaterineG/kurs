@@ -47,6 +47,8 @@
     background-color: var(--alfa-color);
   }
 
+
+
   .header__button {
     display: none;
   }
@@ -63,7 +65,9 @@
     transform: translateX(-2px);
   }
 
-
+  .open{
+    display: block;
+  }
   .header__bottom {
     display: none;
   }

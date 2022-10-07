@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     const screenWidth = window.screen.width;
 
-    if(screenWidth <= 320){
+    if (screenWidth <= 320) {
       document.querySelector('.contacts__submit').textContent = "Заказать";
     }
   });
@@ -137,18 +137,18 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
       slidesPerView: 2,
       spaceBetween: 34
     },
-    700:{
-      slidesPerView:2,
+    700: {
+      slidesPerView: 2,
       spaceBetween: 34
     },
-    480:{
+    480: {
       slidesPerView: 1
     },
-    320:{
-      slidesPerView:1
+    320: {
+      slidesPerView: 1
     },
-    0:{
-      slidesPerView:1
+    0: {
+      slidesPerView: 1
     }
 
   }
@@ -192,12 +192,12 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
   head.addEventListener('click', function (elem) {
     const num = elem.currentTarget.dataset.block;
     const button = document.querySelector(`[data-button="${num}"]`); //кнопка
- 
- 
-      button.classList.toggle('rotator');
-      button.classList.toggle('norotator');
-     //если установлен поворот, то просто снимаем
-    
+
+
+    button.classList.toggle('rotator');
+    button.classList.toggle('norotator');
+    //если установлен поворот, то просто снимаем
+
     /*фокусируем на первой кнопке и ставим картинку*/
     let buttons = document.querySelectorAll('.accordion__btn');
     for (let buttonItem of buttons) {
@@ -215,8 +215,10 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
 /*accordion */
 
 $(function () {
-  $("#accordion").accordion({ heightStyle: "content",
-  collapsible: true });
+  $("#accordion").accordion({
+    heightStyle: "content",
+    collapsible: true
+  });
 });
 /*поворот стрелочки аккордеона клик на хедере */
 
@@ -263,15 +265,15 @@ const swiperEvents = new Swiper('.events__swiper', {
       spaceBetween: 50
     },
     // when window width is >= 640px
-    768: {
+    600: {
       slidesPerView: 2,
       spaceBetween: 34
     },    // when window width is >= 480px
-    700: {
-      slidesPerView:1
+    320: {
+      slidesPerView: 1
     },
     0: {
-      slidesPerView:1
+      slidesPerView: 1
     }
 
   }
@@ -280,10 +282,10 @@ const swiperEvents = new Swiper('.events__swiper', {
 /*красим точку в выборе */
 
 function addcheck(elem) {
- /* document.querySelectorAll('.option__item').forEach(function (el) {
-    el.classList.add('optionchecked');
-    el.classList.remove('defaultchecked');
-  });*/
+  /* document.querySelectorAll('.option__item').forEach(function (el) {
+     el.classList.add('optionchecked');
+     el.classList.remove('defaultchecked');
+   });*/
   elem.currentTarget.classList.toggle('optionchecked');
 }
 document.querySelectorAll('.option__item').forEach(function (option) {
@@ -308,10 +310,10 @@ const projectwiper = new Swiper('.project__swiper', {
       spaceBetween: 50
     },
     481: {
-      slidesPerView:1
+      slidesPerView: 1
     },
     120: {
-      slidesPerView:1
+      slidesPerView: 1
     }
   },
   // If we need pagination
@@ -402,12 +404,15 @@ new tippy('#project__tooltip3', {
   theme: 'tomato',
 });
 
-let opensearch = document.querySelector('.header__search').addEventListener('click', function (){
-  document.querySelector('.header__searchbar').classList.add('open');
-  document.querySelector('.header__search').classList.remove('open');
+document.querySelector('.header__search').addEventListener('click', function () {
+  console.log(document.querySelector('.header__search'));
+  document.querySelector('.header__searchbar').style.display = "flex";
+  document.querySelector('.header__searchbar').style.opacity = "1";
+  
 });
 
-let closesearch = document.querySelector('.header__closebar').addEventListener('click', function (){
-  document.querySelector('.header__searchbar').classList.remove('open');
-  document.querySelector('.header__search').classList.add('open');
+let closesearch = document.querySelector('.header__closebar').addEventListener('click', function () {
+
+  document.querySelector('.header__searchbar').style.opacity = "0"
+  document.querySelector('.header__searchbar').style.display = "none";
 });
