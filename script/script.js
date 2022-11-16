@@ -24,14 +24,17 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 /*Выпадающий список*/
+const popup = document.querySelectorAll('.menu__container');
+
 document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', function (event) {
 
-    if (event.target.className != 'dropdown' && event.target.className != 'menu__link' && event.target.className != 'select') {
+    if (event.target.className != 'menu__container' && event.target.className != 'menu__link' && event.target.className != 'select') {
 
       popup.forEach(function (elem) {
-        elem.classList.remove('active');
+        elem.style.visibility="hidden";
+        elem.style.opacity="0";
 
       })
     }
@@ -57,14 +60,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const path = event.currentTarget.dataset.item;
       const currOption = document.querySelector(`[data-dropdown="${path}"]`); //текущий выбор
       const mark = document.querySelector(`[data-mark="${path}"]`); //текущий выбор нижнего меню
-      if (currOption.classList.contains('active')) {
-        currOption.classList.remove('active');
-      } //если установлен актив, то просто снимаем
+      if (currOption.style.visibility=="visible"){
+      currOption.style.visibility="hidden";
+      dropdown.style.opacity = 0;}
+            //если установлен актив, то просто снимаем
       else {
-        document.querySelectorAll('.option').forEach(function (dropdown) {
-          dropdown.classList.remove('active'); //снимаем актив у всех   
+        document.querySelectorAll('.menu__container').forEach(function (dropdown) {
+          dropdown.style.visibility="hidden"; //снимаем видимость у всех  
+          dropdown.style.opacity = 0;
         });
-        currOption.classList.add('active'); //добавляем актив к текущему выбору
+        currOption.style.visibility="visible"; //добавляем актив к текущему выбору
+        currOption.style.opacity = 1;
 
 
       };
@@ -85,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   })
-  const popup = document.querySelectorAll('.dropdown');
   //загружаем контент про италию
   loadNames('it');
 
@@ -416,3 +421,6 @@ let closesearch = document.querySelector('.header__closebar').addEventListener('
   document.querySelector('.header__searchbar').style.opacity = "0"
   document.querySelector('.header__searchbar').style.display = "none";
 });
+
+var myElement = document.getElementById('simple-bar');
+new SimpleBar(myElement, { autoHide: true });
