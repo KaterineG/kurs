@@ -74,7 +74,7 @@
             button.setAttribute('data-artist', i);
             parent.appendChild(li);
             li.appendChild(button);
-            button.setAttribute('aria-label',`показа информации по художнику ${countres[num][i][j].name}`);
+            button.setAttribute('aria-label', `показа информации по художнику ${countres[num][i][j].name}`);
 
             /*Вешаем событие по художникам */
             button.addEventListener('click', function (element) {
@@ -112,7 +112,7 @@
               for (let buttonItem of buttons) {
                 buttonItem.classList.remove('accordion__btnViolet');
               };
-             // element.currentTarget.classList.add('accordion__btnViolet');
+              element.currentTarget.classList.add('accordion__btnViolet');
 
 
             });
@@ -192,7 +192,7 @@
     link.textContent = 'В галерею';
     link.setAttribute('href', '#gallery');
     link.setAttribute('id', 'cardlink');
-    link.setAttribute('aria-label','Переход на страницу галереи');
+    link.setAttribute('aria-label', 'Переход на страницу галереи');
     link.style.display = 'block';
     container.appendChild(left);
     container.appendChild(right);
@@ -224,7 +224,7 @@
     let header = document.getElementById('cardName');
     let desc = document.getElementById('cardDescription');
     let linkc = document.getElementById('cardlink');
-    linkc.setAttribute('aria-label','Переход на страницу галереи');
+    linkc.setAttribute('aria-label', 'Переход на страницу галереи');
 
     linkc.classList.add('card__blocklink2');
     /*очищаем карточку слева */

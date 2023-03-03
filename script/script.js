@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.target.className != 'menu__container' && event.target.className != 'menu__link' && event.target.className != 'select') {
 
       popup.forEach(function (elem) {
-        elem.style.visibility="hidden";
-        elem.style.opacity="0";
+        elem.style.visibility = "hidden";
+        elem.style.opacity = "0";
 
       })
     }
@@ -60,16 +60,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const path = event.currentTarget.dataset.item;
       const currOption = document.querySelector(`[data-dropdown="${path}"]`); //текущий выбор
       const mark = document.querySelector(`[data-mark="${path}"]`); //текущий выбор нижнего меню
-      if (currOption.style.visibility=="visible"){
-      currOption.style.visibility="hidden";
-      dropdown.style.opacity = 0;}
-            //если установлен актив, то просто снимаем
+      if (currOption.style.visibility == "visible") {
+        currOption.style.visibility = "hidden";
+        currOption.style.opacity = 0;
+      }
+      //если установлен актив, то просто снимаем
       else {
         document.querySelectorAll('.menu__container').forEach(function (dropdown) {
-          dropdown.style.visibility="hidden"; //снимаем видимость у всех  
+          dropdown.style.visibility = "hidden"; //снимаем видимость у всех  
           dropdown.style.opacity = 0;
         });
-        currOption.style.visibility="visible"; //добавляем актив к текущему выбору
+        currOption.style.visibility = "visible"; //добавляем актив к текущему выбору
         currOption.style.opacity = 1;
 
 
@@ -142,7 +143,7 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
       slidesPerView: 2,
       spaceBetween: 34
     },
-    700: {
+    576: {
       slidesPerView: 2,
       spaceBetween: 34
     },
@@ -190,7 +191,7 @@ document.querySelectorAll('.accordion__block').forEach(function (head) {
       ab.classList.remove('accordionload');
     });
 
-    head.classList.toggle('accordion__block-open');
+    head.classList.add('accordion__block-open');
 
   })
   //установка поворота стрелочки
@@ -225,16 +226,6 @@ $(function () {
     collapsible: true
   });
 });
-/*поворот стрелочки аккордеона клик на хедере */
-
-/*
-$( function() {
-  $( "#accordion" ).accordion({
-    collapsible: true
-  });
-} );
-
-*/
 
 document.querySelectorAll('.gallery-svg-fill').forEach(function (button) {
   button.addEventListener('click', function (e) {
@@ -256,6 +247,7 @@ const swiperEvents = new Swiper('.events__swiper', {
   pagination: {
     el: '.events__swiper-pagination',
     type: 'bullets',
+    clickable: true,
   },
   slidesPerView: 3,
   spaceBetween: 50,
@@ -265,11 +257,15 @@ const swiperEvents = new Swiper('.events__swiper', {
       slidesPerView: 3,
       spaceBetween: 50
     },
-    1024: {
+    1400: {
       slidesPerView: 3,
       spaceBetween: 50
     },
     // when window width is >= 640px
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 27
+    },
     600: {
       slidesPerView: 2,
       spaceBetween: 34
@@ -302,17 +298,25 @@ document.querySelectorAll('.option__item').forEach(function (option) {
 
 const projectwiper = new Swiper('.project__swiper', {
   // Optional parameters
-  loop: true,
+  loop: false,
   slidesPerView: 3,
+  slidesPerGroup: 3,
   spaceBetween: 50,
   breakpoints: {
     1024: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50
+    },
+    1000: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 50
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 50
+      slidesPerGroup: 2,
+      spaceBetween: 37
     },
     481: {
       slidesPerView: 1
@@ -409,18 +413,37 @@ new tippy('#project__tooltip3', {
   theme: 'tomato',
 });
 
-document.querySelector('.header__search').addEventListener('click', function () {
-  console.log(document.querySelector('.header__search'));
-  document.querySelector('.header__searchbar').style.display = "flex";
-  document.querySelector('.header__searchbar').style.opacity = "1";
-  
+document.querySelector('.header__searcht').addEventListener('click', function () {
+  document.querySelector('.header__searcht').classList.add('closesearch');
+  document.querySelector('.header__searchbar').classList.add('opensearch');
+
+
+
 });
 
 let closesearch = document.querySelector('.header__closebar').addEventListener('click', function () {
+  document.querySelector('.header__searchbar').classList.remove('opensearch');
+  document.querySelector('.header__searcht').classList.remove('closesearch');
 
-  document.querySelector('.header__searchbar').style.opacity = "0"
-  document.querySelector('.header__searchbar').style.display = "none";
+
+
+});
+const anchors = document.querySelectorAll('a.scroll-to')
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href')
+
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+
+$(function () {
+  $("#phone").mask("+7(999) 999-9999");
 });
 
-var myElement = document.getElementById('simple-bar');
-new SimpleBar(myElement, { autoHide: true });

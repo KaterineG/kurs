@@ -2,7 +2,7 @@
   .container {
     max-width: 1240px;
     padding: 0 50px;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   .accordion__list {
@@ -16,12 +16,11 @@
   .container {
     max-width: 1024px;
     padding: 0 50px;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   :root {
     --container-padding-left: 50px;
-
   }
 
   .header__nav {
@@ -34,10 +33,15 @@
     height: 30px;
     background-image: url('../img/Burger.png');
   }
-
+  .header__nav-mobil {
+    transform: translateX(-17px);
+  }
+  .header__mobil {
+    overflow: scroll;
+    height: 100vh;
+  }
   .header__burgercontent {
     display: flex;
-
   }
 
   .header__search {
@@ -47,7 +51,13 @@
     background-color: var(--alfa-color);
   }
 
-
+  .header__searcht {
+    display: flex;
+    padding: 0;
+    transform: translateY(4px);
+    background-color: var(--alfa-color);
+    cursor: pointer;
+  }
 
   .header__button {
     display: none;
@@ -65,7 +75,7 @@
     transform: translateX(-2px);
   }
 
-  .open{
+  .open {
     display: block;
   }
   .header__bottom {
@@ -78,7 +88,7 @@
   }
 
   .hero {
-    padding: 200px 0 116px 0;
+    padding: 200px 0 14px 0;
   }
 
   .hero__slider {
@@ -87,7 +97,6 @@
 
   .hero__text {
     padding-top: 13px;
-
   }
 
   .hero__header {
@@ -114,7 +123,12 @@
   .swiper-container {
     height: 100%;
   }
-
+  .image13 {
+    background-image: url('../img/gallery/1024gal1.jpg');
+  }
+  .image14 {
+    background-image: url('../img/gallery/1024img2.png');
+  }
   .about {
     padding-top: 78px;
   }
@@ -122,12 +136,12 @@
   .about__description {
     width: 100%;
   }
-
-
+  .catalog__content-text {
+    padding-top: 13px;
+  }
   .gallery__swiper-container {
-
     width: 100%;
-    height: 315px;
+    height: 316px;
     overflow: hidden;
   }
 
@@ -144,7 +158,7 @@
 
   .gallery__right {
     width: 70%;
-    padding: 17px 0 0 5%;
+    padding: 17px 0 0 49px;
   }
 
   .gallery__left {
@@ -166,7 +180,6 @@
 
   .catalog__sect {
     padding-left: 35px;
-
   }
 
   .catalog__card {
@@ -209,19 +222,16 @@
   }
 
   .events__swiper {
-
-
     min-height: 683px;
     /*transform: translateX(-3px);*/
   }
 
   .magnifier {
-    width: 260px;
-    height: 260px;
-
-    top: calc(50% - 130px);
-    left: calc(50% - 130px);
-
+    height: calc(9vw);
+    top: 0;
+    left: 0;
+    text-align: center;
+    vertical-align: 50vw;
   }
 
   .events__cover {
@@ -264,7 +274,7 @@
 
   .events__what {
     padding-left: 33px;
-    padding-right: 20px;
+    padding-right: 0;
     padding-bottom: 71px;
     padding-top: 0;
     max-width: 290px;
@@ -296,6 +306,7 @@
   .events__swiper-slide {
     width: 500px;
     margin-right: 27px;
+    min-height: 683px;
   }
 
   .events__swiper-pagination {
@@ -325,7 +336,6 @@
     height: 128px;
   }
 
-
   .project__swiper-button-prev {
     top: 49px;
     left: -51px;
@@ -341,7 +351,7 @@
   }
 
   .project__partners {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
 
   .project__company {
@@ -363,14 +373,14 @@
 
   .contacts__address {
     margin-bottom: 35px;
-
   }
-  .contacts__tel, .contacts__name {
+  .contacts__tel,
+  .contacts__name {
     height: 49px;
   }
   .contacts__tel {
     margin-bottom: 20px;
-    width:270px;
+    width: 270px;
   }
 
   .contacts__submit {
@@ -398,7 +408,6 @@
     margin-bottom: 19px;
   }
 
-
   .contacts {
     padding-bottom: 9px;
     padding-top: 50px;
@@ -412,7 +421,7 @@
     transform: translateX(-99px) translateY(4px);
   }
 
-  .social__link>svg {
+  .social__link > svg {
     width: 60px;
     height: 60px;
   }

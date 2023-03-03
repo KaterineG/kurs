@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "inputmask": "^5.0.7",
     "simplebar": "^5.3.9"
   }
 }

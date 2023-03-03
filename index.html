@@ -19,10 +19,13 @@
   <link rel="stylesheet" type="text/CSS" href="css/styletab.css">
   <link rel="stylesheet" type="text/CSS" href="css/stylemobil.css">
   <script src="script/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+    type="text/javascript"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="script/catalogFunction.js"></script>
   <script src="script/Choices-master/public/assets/scripts/choices.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=098eb631-bdbf-4827-818a-ef3ba233f3af&lang=ru_RU"></script>
+  <script src="plugins/jquery.maskedinput.min.js"></script>
 
 </head>
 
@@ -34,27 +37,27 @@
         <nav class="header__nav-mobil nav list-reset">
           <ul class="nav__list-mobil">
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
+              <a class="nav__link scroll-to" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
             </li>
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
+              <a class="nav__link scroll-to" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
             </li>
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
+              <a class="nav__link scroll-to" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
             </li>
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#actions" aria-label="Пункт меню события">События</a>
+              <a class="nav__link scroll-to" href="#actions" aria-label="Пункт меню события">События</a>
             </li>
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#project" aria-label="Пункт меню проекты">Проекты</a>
+              <a class="nav__link scroll-to" href="#project" aria-label="Пункт меню проекты">Проекты</a>
             </li>
             <li class="nav__item list-reset">
-              <a class="nav__link" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
+              <a class="nav__link scroll-to" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
             </li>
           </ul>
         </nav>
         <button class="header__sign" aria-label="Кнопка войти">
-          <svg width="14" height="13" viewbox="2 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="14" height="13" viewbox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
               fill="white" />
@@ -71,22 +74,22 @@
           <nav class="header__nav nav list-reset">
             <ul class="nav__list">
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
+                <a class="nav__link scroll-to" href="#about" aria-label="Пункт меню о нас">О&nbsp;нас</a>
               </li>
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
+                <a class="nav__link scroll-to" href="#gallery" aria-label="Пункт меню галерея">Галерея</a>
               </li>
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
+                <a class="nav__link scroll-to" href="#catalog" aria-label="Пункт меню каталог">Каталог</a>
               </li>
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#actions" aria-label="Пункт меню события">События</a>
+                <a class="nav__link scroll-to" href="#actions" aria-label="Пункт меню события">События</a>
               </li>
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#project" aria-label="Пункт меню проекты">Проекты</a>
+                <a class="nav__link scroll-to" href="#project" aria-label="Пункт меню проекты">Проекты</a>
               </li>
               <li class="nav__item list-reset">
-                <a class="nav__link" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
+                <a class="nav__link scroll-to" href="#contacts" aria-label="Пункт меню контакты">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -98,9 +101,9 @@
             </svg>
             Войти
           </button>
-          <button class="header__search" aria-label="кнопка поиска на сайте">
+          <button class="header__searcht" aria-label="кнопка поиска на сайте">
             <img src="img/search.png" alt=""></button>
-          <div class="header__searchbar opensearch">
+          <div class="header__searchbar">
             <button class="header__search bar" aria-label="кнопка поиска на сайте">
               <img src="img/search.png" alt=""></button>
             <input class="header__inputbar" type="text" placeholder="">
@@ -121,29 +124,29 @@
                   <path d="M11 5L6 10L0.999997 5" stroke="white" />
                 </svg>
               </button>
-              <div class="menu__container" data-dropdown="1" >
+              <div class="menu__container" data-dropdown="1">
                 <ul class="dropdown option list-reset" id="simple-bar" data-simplebar>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p1"
-                    aria-label="Художник Тинторетто">Тинторетто</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p2"
-                    aria-label="Художник Фридрих">Фридрих</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p3"
-                    aria-label="Художник Леонардо">Леонардо</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p4"
-                    aria-label="Художник Вероккьо">Вероккьо</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p1"
-                    aria-label="Художник Тинторетто">Тинторетто</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p2"
-                    aria-label="Художник Фридрих">Фридрих</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p3"
-                    aria-label="Художник Леонардо">Леонардо</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p4"
-                    aria-label="Художник Верьккьо">Вероккьо</button></li>
-              </ul>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p1"
+                      aria-label="Художник Тинторетто">Тинторетто</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p2"
+                      aria-label="Художник Фридрих">Фридрих</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p3"
+                      aria-label="Художник Леонардо">Леонардо</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p4"
+                      aria-label="Художник Вероккьо">Вероккьо</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p1"
+                      aria-label="Художник Тинторетто">Тинторетто</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p2"
+                      aria-label="Художник Фридрих">Фридрих</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p3"
+                      aria-label="Художник Леонардо">Леонардо</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p4"
+                      aria-label="Художник Верьккьо">Вероккьо</button></li>
+                </ul>
               </div>
-              
+
             </li>
             <li class="menu__item select list-reset" data-item="2">
               <button class="menu__link" aria-label="Выпадающий список Импрессеонизм">
@@ -154,20 +157,20 @@
                 </svg>
               </button>
               <div class="menu__container" data-dropdown="2">
-              <ul class="dropdown option list-reset"  data-simplebar>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p5"
-                    aria-label="Художние Моне">Моне</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p6"
-                    aria-label="Художник Сислей">Сислей</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p7"
-                    aria-label="Художник Мане">Мане</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p8"
-                    aria-label="Художник Ренуар">Ренуар</button>
-                </li>
-              </ul>
+                <ul class="dropdown option list-reset" data-simplebar>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p5"
+                      aria-label="Художние Моне">Моне</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p6"
+                      aria-label="Художник Сислей">Сислей</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p7"
+                      aria-label="Художник Мане">Мане</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p8"
+                      aria-label="Художник Ренуар">Ренуар</button>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="menu__item select list-reset" data-item="3">
@@ -179,19 +182,19 @@
                 </svg>
               </button>
               <div class="menu__container" data-dropdown="3">
-              <ul class="dropdown option list-reset"  data-simplebar>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p9"
-                    aria-label="Художник Ван Гог">Ван&#8209;Гог</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p10"
-                    aria-label="Художник Сезанн">Сезанн</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p11"
-                    aria-label="Художник Гоген">Гоген</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p12"
-                    aria-label="Художник Сёра">Сёра</button>
-                </li>
-              </ul>
+                <ul class="dropdown option list-reset" data-simplebar>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p9"
+                      aria-label="Художник Ван Гог">Ван&#8209;Гог</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p10"
+                      aria-label="Художник Сезанн">Сезанн</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p11"
+                      aria-label="Художник Гоген">Гоген</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p12"
+                      aria-label="Художник Сёра">Сёра</button>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="menu__item select list-reset" data-item="4">
@@ -203,16 +206,16 @@
                 </svg>
               </button>
               <div class="menu__container" data-dropdown="4">
-              <ul class="dropdown option list-reset"  data-simplebar>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p13"
-                    aria-label="Художник Кандинский">Кандинский</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p14"
-                    aria-label="Художник Маринетти">Маринетти</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p15"
-                    aria-label="Художник Малевич">Малевич</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p16"
-                    aria-label="Художник Пикассо">Пикассо</button></li>
-              </ul>
+                <ul class="dropdown option list-reset" data-simplebar>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p13"
+                      aria-label="Художник Кандинский">Кандинский</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p14"
+                      aria-label="Художник Маринетти">Маринетти</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p15"
+                      aria-label="Художник Малевич">Малевич</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p16"
+                      aria-label="Художник Пикассо">Пикассо</button></li>
+                </ul>
               </div>
             </li>
             <li class="menu__item select list-reset" data-item="5">
@@ -224,18 +227,18 @@
                 </svg>
               </button>
               <div class="menu__container" data-dropdown="5">
-              <ul class="dropdown option list-reset"  data-simplebar>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p17"
-                    aria-label="Художник Карра">Карра</button>
-                </li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p18"
-                    aria-label="Художник Пирантелла">Пирантелла</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p19"
-                    aria-label="Художник Северини">Северини</button></li>
-                <li class="dropdown__item list-reset"><button class="dropdown__link p20"
-                    aria-label="Художник Балла">Балла</button>
-                </li>
-              </ul>
+                <ul class="dropdown option list-reset" data-simplebar>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p17"
+                      aria-label="Художник Карра">Карра</button>
+                  </li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p18"
+                      aria-label="Художник Пирантелла">Пирантелла</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p19"
+                      aria-label="Художник Северини">Северини</button></li>
+                  <li class="dropdown__item list-reset"><button class="dropdown__link p20"
+                      aria-label="Художник Балла">Балла</button>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -346,42 +349,6 @@
             </div>
             <div class="gallery__swiper-container">
               <div class="swiper-wrapper">
-                <div class="gallery__swiper-slide image1" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image3" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image2" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image4" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image5" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image6" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image7" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image8" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image9" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image10" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image11" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image12" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
                 <div class="gallery__swiper-slide image13" tabindex="0">
                   <div class="magnifier"></div>
                 </div>
@@ -391,58 +358,13 @@
                 <div class="gallery__swiper-slide image15" tabindex="0">
                   <div class="magnifier"></div>
                 </div>
-                <div class="gallery__swiper-slide image16" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image17" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image18" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image19" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image20" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image21" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image22" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image23" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image24" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image25" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image26" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image27" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image28" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image29" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
-                <div class="gallery__swiper-slide image30" tabindex="0">
-                  <div class="magnifier"></div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="container">
         <div class="catalog__header-block">
           <h2 class="catalog__header secondheader">Каталог</h2>
@@ -593,7 +515,7 @@
         </div>
       </div>
     </section>
-    <section class="events">
+    <section class="events" id="events">
       <div class="container">
         <h2 class="events__header secondheader">События</h2>
         <div class="events__content">
@@ -689,7 +611,7 @@
         </div>
       </div>
     </section>
-    <section class="project">
+    <section class="project" id="project">
       <div class="container">
         <h2 class="project__header">Проекты</h2>
         <div class="project__text">
@@ -777,7 +699,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="container">
         <div class=contacts__content>
           <div class="contacts__address">
@@ -788,8 +710,8 @@
             <h2 hidden="hidden">Обратная связь и контакты</h2>
             <div class="contacts__block"><input class="contacts__name" type="text" placeholder="Имя*"><span
                 class="contacts__err">Недопустимый формат</span></div>
-            <div class="contacts__block"> <input class="contacts__tel" type="text" placeholder="Телефон*"><span
-                class="contacts__err">Недопустимый формат</span></div>
+            <div class="contacts__block"> <input class="contacts__tel" id="phone" type="text"
+                placeholder="Телефон*"><span class="contacts__err">Недопустимый формат</span></div>
             <button class="contacts__submit">Заказать&nbsp;обратный&nbsp;звонок</button>
             <button class="contacts__submitmob">Заказать</button>
           </form>
