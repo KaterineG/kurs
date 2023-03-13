@@ -525,11 +525,22 @@ body {
 .dropdown {
   font-size: 14px;
 }
+.dropdown__item {
+  position: relative;
+}
 
 .dropdown__item:not(last-child) {
   margin-bottom: 20px;
 }
-
+.dropdown__item:active > .dropdown__link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, var(--violet-grey-40), var(--violet-grey-40));
+}
 .p1 {
   background-image: url('../img/hero/tintoretto.png');
 }
@@ -611,7 +622,7 @@ body {
 }
 
 .dropdown__link {
-  /*кнопка*/
+  position: relative;
   width: 220px;
   padding: 9px 120px 12px 14px;
 
@@ -654,7 +665,6 @@ body {
 
 .dropdown__link:active {
   color: var(--white);
-  background: linear-gradient(0deg, var(--violet-grey-40), var(--violet-grey-40));
   outline: 2px solid var(--violet-effect-highlight);
 }
 
@@ -1128,7 +1138,8 @@ button {
 
 .choices__list--dropdown {
   padding-left: 0;
-  padding-top: 0;
+  padding-top: 0;magnifier
+
   padding-bottom: 0;
   font-style: normal;
   font-weight: 400;
@@ -1140,7 +1151,7 @@ button {
   border-bottom-right-radius: 0px;
   /* or 200% */
   color: var(--grey-999);
-  background-color: var(--black);
+  background-color: red;
 }
 
 .choices__list {
@@ -1151,7 +1162,7 @@ button {
 .choices__list,
 .choices__item {
   color: var(--grey-999);
-  background-color: var(--black);
+  background-color: var(--alfa);
   opacity: 1;
 }
 
@@ -1355,15 +1366,16 @@ button {
   flex-shrink: 0;
   width: 350px;
   height: 100%;
-  transition-property: transform, border-color, background-color;
+  transition-property: transform,outline-color, background-color;
   transition-timing-function: ease-out;
   transition-duration: 0.3s;
   pointer-events: auto;
   background-repeat: no-repeat;
   cursor: pointer;
   flex-shrink: 0;
-  border: 3px solid var(--alfa-color);
+  outline: 3px solid var(--alfa-color);
   background-size: contain;
+  
 }
 
 .gallery__swiper-slide:focus-visible {
@@ -1398,7 +1410,7 @@ button {
 
 .magnifier {
   width: 100%;
-  height: calc(14vw);
+  height: 100%
   background-color: var(--black50);
   opacity: 0;
   transition: opacity 0.6s ease;
@@ -1496,15 +1508,15 @@ button {
 }
 
 .image16 {
-  background-image: url('../img/gallery/16.jpg');
+  background-image: url('../img/gallery/img1920a.jpg');
 }
 
 .image17 {
-  background-image: url('../img/gallery/17.jpg');
+  background-image: url('../img/gallery/img1920b.png');
 }
 
 .image18 {
-  background-image: url('../img/gallery/18.jpg');
+  background-image: url('../img/gallery/img1920c.jpg');
 }
 
 .image19 {

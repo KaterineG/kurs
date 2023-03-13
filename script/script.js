@@ -133,6 +133,7 @@ const swiperGalery = new Swiper('.gallery__swiper-container', {
     // when window width is >= 320px
     1920: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 50
     },
     1025: {
@@ -447,3 +448,16 @@ $(function () {
   $("#phone").mask("+7(999) 999-9999");
 });
 
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+
+  smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = smoothLink.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+};
