@@ -35,12 +35,11 @@
     width: 29px;
     height: 29px;
     background-size: cover;
-    transform: translate(34px, -2px);
+    background-repeat: no-repeat;
   }
 
   .header__inputbar {
-    width: 576px;
-    transform: translate(11px, -2px);
+    width: 80%;
   }
 
   .img1 {
@@ -451,7 +450,7 @@
   }
 
   .header__content {
-    padding: 4px 0;
+    padding: 7px 0;
   }
 
   .hero__description {
@@ -467,9 +466,11 @@
     display: none;
   }
 
-  .header__search img {
-    width: 17px;
-    height: 17px;
+  .header__searcht {
+    transform: none;
+  }
+  .header__searcht > img {
+    width: 18px;
   }
 
   .nav__link {

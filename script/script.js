@@ -375,11 +375,18 @@ document.querySelector('.contacts__form').addEventListener('submit', function (e
 })
 
 document.querySelector('.header__burger').addEventListener('click', function () {
-  document.querySelector('.header__mobil').style.display = 'block';
+  document.querySelector('.header__mobil').style.left = 0;
+  document.querySelector('.header__mobil').style.visibility = 'visible';
+  document.querySelector('.header__mobil').style.opacity = 1;
+
 })
 
 document.querySelector('.header__close').addEventListener('click', function () {
-  document.querySelector('.header__mobil').style.display = 'none';
+
+
+  document.querySelector('.header__mobil').style.opacity = 0;
+  setTimeout(() => { document.querySelector('.header__mobil').style.visibility = 'hidden' }, 300);
+
 })
 
 
@@ -461,3 +468,23 @@ for (let smoothLink of smoothLinks) {
     });
   });
 };
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let href = this.getAttribute('href').substring(1);
+
+    const scrollTarget = document.getElementById(href);
+
+    const topOffset = document.querySelector('.scrollto').offsetHeight;
+    // const topOffset = 0; // если не нужен отступ сверху 
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
